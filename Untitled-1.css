@@ -1,0 +1,3519 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" class="k-webkit k-webkit125"><head><link rel="icon" href="/Content/Images/Rocket_ICON.ico"><meta name="format-detection" content="telephone=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="/Content/images/site/PMIcon.png">
+    <link rel="icon" type="image/png" href="/Content/images/site/PMIcon.png">
+    
+    <!--Customization according to whole PM2-->
+    <link href="/Content/ApolloStyles/style.css?05091054" rel="Stylesheet" type="text/css">
+    <link href="/Content/sitebase1.css?05091054?05091054" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="/Content/Planner2/PlannerAddin.css?05091054">
+    <link rel="stylesheet" type="text/css" href="/Content/Planner2/ExtraNameTooltip.css?05091054">
+    <!--[if lte IE 7]>
+    <link href="/Content/sitebase-ie7lte.css?05091054" rel="stylesheet" type="text/css" />
+    <![endif]-->
+    <!--[if IE]>
+    <link href="/Content/sitebase-ie.css?05091054" rel="stylesheet" type="text/css" />
+    <![endif]-->
+
+    <!--Borrowed from Membership's Social Site to not to take the whole SocialSite infrastructure and scripts-->
+    <style type="text/css">
+        #main-wrapper { height: 100% !important; min-width: initial!important; }
+
+        #main-content { height: 100% !important; }
+
+        #content-wrapper { height: 100% !important; background-color: #ffffff !important; }
+        
+        #header-wrapper { border-width: 3px;position: relative !important; box-sizing: content-box !important; min-width: initial!important; }
+         
+    </style>
+    
+    <style type="text/css">
+        .Company-logo {
+            table-layout: fixed; 
+            min-width: 220px; 
+            max-height: 140px; 
+            padding-right: 0; 
+            margin-left: 0; 
+            max-width: 300px;
+        }
+        #headerTopRow {
+            width: 100%; 
+            padding-top: 0; 
+            vertical-align: top; 
+            white-space: nowrap;
+        }
+        #Td2 {
+            min-width:750px; 
+            width:100%; 
+            padding-top: 0; 
+            vertical-align: top; 
+            white-space: nowrap;
+            background: black;
+        }
+        #Td6 {
+            padding-bottom: 0.5em; 
+            vertical-align: bottom;
+        }
+        #appSuiteCell {
+            min-width:520px; 
+            vertical-align:bottom; 
+            padding-bottom: 0; 
+        }
+        .k-link:link, .k-link:visited, .k-nav-current.k-hover .k-link {
+            color: #333 !important;
+        }
+       
+    </style>
+    
+    <style type="text/css">
+
+        /* App Suite Layout CSS */
+        #appNav li:not(.k-item) {
+            border-color: black;
+            border-left-width: 0;
+            border-right: 1px solid black;
+            display: block;
+            float: left;
+            height: 30px;
+            line-height: 30px;
+            padding-left: 10px;
+            padding-right: 10px;
+            position: relative;
+            max-width: 100px;
+            white-space: nowrap;
+            text-overflow: ellipsis;   
+        }
+
+        #appNav li {
+            position: relative;
+        }
+
+        #appNav li a, #appNav li:not(.k-item) a
+        {
+            /* padding: 0 0 0 0; */
+            min-width: 225px;
+            max-width: 225px;    
+            overflow: hidden;
+            text-overflow: ellipsis;
+            background-color: transparent;    
+        }
+
+
+        #appNavLdiv #appNav li a.tab, #appNavLdiv #appNav li a.tab-active {
+            display: inline-block;
+            max-width: 100px;
+            min-width: 0;
+            padding: 0;
+        }
+
+        #appNav #TopRightMenu {
+            padding-left: 0;
+            padding-right: 0;
+            width: 66px;
+        }
+
+        #appNav #appSelector {
+            display: inline;
+            font-size: 100%;
+        }
+
+        #appNav .k-animation-container {
+            margin-top: 0;
+        }
+
+        #appNav .k-animation-container .k-group {
+            /*width: 225px;*/
+            left: 11px;
+        }
+
+        #appNav .k-link {
+            margin-left: 10px;
+            margin-right: 10px;
+            width: 0;
+        }
+
+        #appNav #appSelector .k-group .k-link, #appNav #appSelector .k-group .k-link:hover
+        {
+            color: #656565;
+            margin-left: 0;
+            margin-right: 0;
+            padding: 0px 20px 10px 10px !important;
+            width: 190px;
+            height: 20px;
+        }
+
+        #appNav #appSelector .k-group .k-link:hover
+        {
+            color: #3f8ac4;
+            background-color:#EAEAEA; /*#f0f0f0;*/    
+        }
+
+        #appNav, #appNav .tab
+        { 
+            background-color: transparent;
+            color:#8c8c8c;                                                  /*@headerTopBar-textColor*/ 
+        }
+
+        #appNav .tab-active, #appNav .tab:hover
+        { 
+            background-color: transparent;
+            color:#ffffff;                                                  /*@headerTopBar-active-textColor*/
+            font-weight: normal;
+        }
+
+        #header-wrapper #appNav .tab-active + .arrow.bottom, #header-wrapper #appNav .tab:hover + .arrow.bottom
+        {
+            display: none;
+        }
+
+        #header-wrapper #appNav .arrow.bottom, #header-wrapper li.expanded > .arrow 
+        {
+            border-top-color: black;            /*@headerTopBar-bgColor*/
+            margin-top: 7px;
+            top: 26px;    
+        }
+
+        /* Top Right Menu Layout CSS */
+        #topNav, #topNav .tab
+        {
+            border-style:none;
+            background-color: transparent;      /*@topMenu-bgColor: transparent*/
+            color:#8c8c8c;                      /*@main-textColor: #ffffff*/
+        }
+
+        #topNav .k-menu .k-item {
+            display: block !important;
+        }
+
+        #OrgMenu 
+        {
+            margin: 0 5px; 
+        }
+
+        #OrgMenu .k-menu .k-arrow-down {
+            margin-right: 0;
+        }
+
+        #topNav .tab-active, #topNav .tab:hover:not(ul)
+        {
+            border-style:none;
+            background-color: transparent;      /*@topMenu-bgColor: transparent*/
+            color: #d1dce5;
+        } 
+
+        #topNav ul.tab:hover {
+            background:none;
+        }
+
+        #topNav #OrganizationSelector span, #topNav #OptionsSelector span {
+            color: #CCCCCC/*#b3b3b3*/;
+            font-size: 13px;
+        }
+
+        #topNav #OrganizationSelector span.k-hover, #topNav #OptionsSelector span.k-hover {
+            background-color: transparent;
+            color: #ffffff;
+        }
+
+        #topNav #OrganizationSelector a.k-hover, #topNav #OptionsSelector a.k-hover {
+            background-color: #EAEAEA;
+            color: #3f8ac4;
+        }
+
+        #topNav #OrganizationSelector a, #topNav #OptionsSelector a {
+            background-color: transparent;
+            color: #656565; /*#8c8c8c;*/
+            font-size: 13px;
+        }
+
+        #topNav #OptionsSelector a 
+        {
+            font-size: 11.7px;
+        }
+
+
+        #topNav #OrganizationSelector span, #topNav #LanguageOptionsSelector span {
+            color: #CCCCCC/*#b3b3b3*/;
+            font-size: 13px;
+        }
+
+        #topNav #OrganizationSelector span.k-hover, #topNav #LanguageOptionsSelector span.k-hover {
+            background-color: #EAEAEA;
+            color: #ffffff;
+        }
+
+        #topNav #OrganizationSelector a.k-hover, #topNav #LanguageOptionsSelector a.k-hover {
+            background-color: #EAEAEA;
+            color: #3f8ac4;
+        }
+
+        #topNav #OrganizationSelector a, #topNav #LanguageOptionsSelector a {
+            background-color: transparent;
+            color: #656565; /*#8c8c8c;*/
+            font-size: 13px;
+        }
+
+        #topNav #LanguageOptionsSelector a 
+        {
+            font-size: 11.7px;
+        }
+
+        /* App Suite Objects Layout CSS */
+        #appsuite-nav .tab, #appNav .tab
+        {
+            background-color: transparent;      /*@mainTabs-bgColor: #242c32 (black)*/
+            color: #8c8c8c;                     /*@mainTabs-textColor: #dbdbdb (lightgrey)*/
+        }
+
+        #headerTopRow #appsuite-nav .tab, #appNav .tab
+        {
+            background-color: transparent;      /*@mainTabs-bgColor: #242c32 (black)*/
+            color: #CCCCCC;                     /*@mainTabs-textColor: #dbdbdb (lightgrey)*/
+        }
+
+        #appsuite-nav .tab-active, #appsuite-nav .tab:hover
+        {    
+            background-color: transparent;      /*@main-color: #3678af (blue)*/    
+            color:#1d1d1d;                      /*@main-textColor: #ffffff*/
+            font-weight: normal; 
+        }
+
+
+        #header-wrapper #appsuite-nav .arrow.bottom
+        {    
+            bottom: 0px;
+            display: none;
+            position: absolute;    
+            left: 50%;
+            margin-left: -5px;
+        }
+
+        #header-wrapper #appsuite-nav .arrow.bottom, #header-wrapper li.expanded > .arrow {
+            border-top-color: transparent;
+        }
+
+        #header-wrapper #appsuite-nav .tab-active > .arrow.bottom, #header-wrapper #appsuite-nav .tab:hover > .arrow.bottom {
+            display: block;
+        }
+
+        #appsuite-nav li {
+            position: relative;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        #header-wrapper #appsuite-nav .arrow.bottom {
+            border-bottom-color: #8c8c8c; /*@headerTopBar-textColor:grey*/
+        }
+
+        #appsuite-nav #ObjectSelector > li > .k-hover {
+            color: #1d1d1d; /*@headerTopBar-bgColor: black*/
+        }
+
+        #appsuite-nav #ObjectSelector .k-group .k-link, #appsuite-nav #ObjectSelector .k-group .k-link:hover {
+            color: #656565;
+            background-color: #ffffff;
+            min-width: 130px;
+            max-width: 130px;
+            width: 120px !important; /*width: 100px;*/
+            border-color: #d3d3d3;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-left: -10px;
+            padding-right: 15px;
+        }
+
+        #appsuite-nav #ObjectSelector .k-group .k-link:hover
+        {
+            color: #3f8ac4;
+            background-color: #EAEAEA;
+        }
+
+        #appsuite-nav #ObjectSelector .k-group /*, #appsuite-nav #ObjectSelector .t-group:hover*/ {
+            display: none;
+            width: 130px!important;
+            top: 6px;
+            left: 18px;
+            padding-right: 16px;
+        }
+
+        /* Header Layout */
+        #headerTopRow{/*background:url(//apps.perfectmind.com/content/images/Site/header-topnav-bg-rpt.jpg)  top left repeat-x !important;
+                      border-bottom:3px solid #9a9c9e; height:32px !important;*/ font-size:13px;font-weight:bold;background-color: black;}
+        /*#appsuite-nav .arrow.bottom{bottom:-15px !important;}*/
+        /*#appSuiteCell{width:995px !important;}*/
+        /*#header-table #appSuiteContainer{width: 995px !important;}*/
+        .Company-logo{padding:10px 0px;}
+        #header-wrapper, #headerTopRow{border-bottom:1px solid #b9b9b9;}
+        #appNav li{height:30px !important;line-height:30px !important;}
+        #headerTopRow #appNav #appSelector .k-link { font-size: 100% !important;}
+        #headerTopRow #appNav .k-link { font-weight:bold; color:#CCCCCC;}
+        #appNav .k-link { font-weight:bold; color: #8c8c8c;}
+        #appNav .tab-active, #appNav .tab:hover, #appNav .k-link:hover{font-weight:bold;color: #ffffff;}
+
+        /* Left Side Panel Layout CSS */
+        .layout-leftpanel-main .left-panel table tbody #relatedObjects{}
+        .layout-leftpanel-main .left-panel table tbody #relatedObjects .relatedObjectListItem{font-size:12px;font-weight:bold;margin-right:10px;}
+        .layout-leftpanel-main .left-panel table tbody #relatedObjects .relatedObjectListItem a{ background-color: #ebebeb;color:#8c8c8c;padding-right:12px;}
+        .layout-leftpanel-main .left-panel table tbody #relatedObjects .relatedObjectListItem a:hover{background-color:#edf4fa/*#4e92c8*/;color:#333/*#fff*/;padding-right:12px;}
+
+        .layout-leftpanel-main .left-panel table tbody #relatedObjects .relatedObjectListItem img{display:none;}
+
+        .layout-leftpanel-main .left-panel table tbody #relatedObjects .relatedObjectListItem a div{display:block !important;float:left;width:120px;}
+        .layout-leftpanel-main .left-panel table tbody #relatedObjects .relatedObjectListItem a span{display:block;float:right;width:40px;text-align:right;font-weight:bold;font-size:15px;}
+        .layout-leftpanel-main .left-panel table tbody #relatedObjects .relatedObjectListItem a:hover span{color:#333/*#fff*/ !important;}
+
+        .layout-leftpanel-main .left-panel table tbody #relatedObjects .relatedObjectListItemSelected{font-size:12px;font-weight:bold;}
+        .layout-leftpanel-main .left-panel table tbody #relatedObjects .relatedObjectListItemSelected a{background-color:#edf4fa/*#4e92c8*/; color:#333/*#fff*/; background-image:url(//apps.perfectmind.com/content/images/Site/sidebar-arrow.gif); background-repeat:no-repeat; background-position:top right;padding-right:22px;}
+        .layout-leftpanel-main .left-panel table tbody #relatedObjects .relatedObjectListItemSelected a:hover{background-color: #edf4fa/*#4e92c8*/;color:#333/*#fff*/; background-image:url(//apps.perfectmind.com/content/images/Site/sidebar-arrow.gif); background-repeat:no-repeat; background-position:top right;padding-right:22px;}
+
+        .layout-leftpanel-main .left-panel table tbody #relatedObjects .relatedObjectListItemSelected img{display:none;}
+        .layout-leftpanel-main .left-panel table tbody #relatedObjects .relatedObjectListItemSelected a div{display:block !important;float:left;width:120px;padding-left: 8px;}
+        .layout-leftpanel-main .left-panel table tbody #relatedObjects .relatedObjectListItemSelected a span{padding-right: 4px; color:#333/*#fff*/ !important;display:block;float:right;width:40px;text-align:right;font-weight:bold;font-size:15px;}
+        .layout-leftpanel-main .left-panel table tbody #relatedObjects .relatedObjectListItemSelected a:hover span{color:#333/*#fff*/ !important;}
+
+        .layout-leftpanel-main .left-panel table tbody #relatedObjects .relatedObjectListItem a, #relatedObjects .relatedObjectListItemSelected a {border-radius: 3px 3px 3px 3px;}
+        .layout-leftpanel-main .left-panel table tbody #primaryObjectItem .box-tab-caption-active, #primaryObjectItem .box-tab-caption {border-radius: 3px 0 0 3px;}
+
+        .layout-leftpanel-main #currentViewPopup tr td div.tab-active { background-color: #edf4fa; color: #333;}
+        .layout-leftpanel-main #currentViewPopup tr td div.tab { background-color: #ebebeb; color: #8c8c8c;}
+
+        /* Layout changes */
+        .viewDropdownItem{padding-left:0px !important;}
+        #currentViewPopup .tab{padding-left:11px !important;border-radius:0px;}
+        #currentViewPopup .tab-active{padding-left:11px !important;border-radius:0px;}
+        .Company-logo{margin-left: 34px !important;}
+        #header-table td{padding:0px !important;}
+        #globalSearchCell{padding-right:0px !important;}
+        #globalSearchCell img{margin-right:26px;margin-bottom:10px;}
+        #headerTopRow > div{margin-left:34px !important;margin-right:24px !important;}
+        #system-buttons-container button, #system-buttons-container .pm-button{border:none !important;	background-color:#fff !important; }
+        #topNav {padding:0px !important;}
+        #topNav #Options-Setup{padding-right:0px !important;}
+
+        #appNav .first{padding-left:0px !important;}
+        #appNav .first a{padding-left:0px !important;}
+        #newObject.button, #multipleDeleteButton.button{border: none !important;width: 75px;}
+
+        #header-table #appSuiteContainer {
+            bottom: 0;
+            left: 0;
+            width: 605px;
+        }
+        /*#header-wrapper, #headerTopRow {border-bottom: 1px solid #8c8c8c !important;}*/
+        #appsuite-nav #object-tab-more{padding:0px !important;}
+        /*#headerTopRow {background-color: #000 !important;} makes the line under the header */
+        #headerTopRow {border:none;}
+        #appsuite-nav li{padding-bottom:5px;}
+        #button-view-find-container{margin-right:2px !important;position: relative;}
+        #appsuite-nav #ObjectSelector .k-group .k-link, #appsuite-nav #ObjectSelector .k-group .k-link:hover {min-width:128px !important;}
+        .hideShowGlobalSearchTable {right: 20px !important;}
+        .contact-subsection-header h3.box-splitter{background-color:#f5f5f5 !important;color:#050505;}
+
+        /* Left Panel changes */
+        .layout-leftpanel-main .left-panel table tbody #relatedObjects .relatedObjectListItemSelected a {
+            background-color: none !important;
+            background-image: none !important;
+            background-position: none !important;
+            background-repeat: no-repeat !important;
+            color: none !important;
+            /* padding-right: 22px !important; */
+        }
+
+        .clearme{height:0px !important;clear:both;font-size:0px;display:block;} 
+
+        /* -----  remove the gray from teh menu ----------  */
+        .layout-leftpanel-main .left-panel table tbody #relatedObjects .relatedObjectListItem a {
+            background-color: #FFFFFF;
+        }
+
+        /* -----  Menu left hand side office profile ------  */
+        .box-tab-caption-active{
+            border-radius: 0px 0px 0px 0px !important;
+        }
+        .box-tab-caption{
+            border-radius: 0px 0px 0px 0px !important;
+        }
+        #DetailPage_leftside_table li{
+            padding-right:0px !important;
+            margin-right: 0px !important;
+        }
+        #DetailPage_leftside_table a{
+            padding-right:0px !important;
+            margin-right: 0px !important;
+            border-radius: 0px 0px 0px 0px !important;
+        }
+        #DetailPage_leftside_table a span{
+            padding-right:10px !important;
+        }
+        #relatedObjects li{
+            padding-right:0px !important;
+            margin-right: 0px !important;
+        }
+        #relatedObjects a{
+            padding-right:0px !important;
+            margin-right: 0px !important;
+            border-radius: 0px 0px 0px 0px !important;
+        }
+        #relatedObjects .tab-active a{
+            padding-left:0px !important;
+        }
+        #relatedObjects .tab-active  div{
+            padding-left:0px !important;
+        }
+        #relatedObjects a span{
+            padding-right:10px !important;
+        }
+
+        /* ----- drop down menu fix ------  */
+        #tblCurrentViewPopup  .viewDropdownItemEdit {
+            width: 1px !important;
+        }
+        #tblCurrentViewPopup div{
+            padding-left:10px !important;  
+        }
+        #currentViewPopup table {
+            min-width:156px !important;
+            overflow:hidden;
+        }
+        .t-widget.t-grid .t-header{
+            border-bottom:1px solid #cccccc !important;
+            border-top:1px solid #cccccc !important;
+        }
+        .t-widget.t-grid .t-header:first-child {
+            border-radius: 0px 0px 0px 0px !important;
+        }
+
+        /* ---------------------------------------------Other css*/
+
+        .objectPageLayoutSection {
+            margin-top: 20px;
+        }
+        .box-tab-caption{background-color:#95b3cc;color:#242c32} 
+        .box-tab-caption-active{background-color:#3678af}
+        #primaryObjectItem .box-tab-caption-active {
+            background-color: #edf4fa;
+        }
+
+        /* View Left side and drop Down */
+        .viewDropdownItem .tab-active table  tbody tr td:first-child {
+            color: black;
+        }
+
+        /* Settings */
+        .tab-active a, .tab a{
+            color: black;
+        }
+        .tab a {
+            color: black /*!important*/;
+        }
+
+        /*Views Left Panel*/
+        .layout-leftpanel-main #currentViewPopup tr td div.tab {
+            background-color: #FFFFFF !important;
+        }
+        #frmCurrentRecord2  #currentViewPopup tr td div.tab {
+            background-color: #FFFFFF !important;
+        }	
+        .no-right-border-radius, .layout-leftpanel-main .tab-active, .left-panel .box-tab-caption, .left-panel .box-tab-caption-active, .left-side-label {
+            border-radius: 0px 0px 0px 0px;
+        }
+        .medium-border-radius, .tab, .tab-active, #topNav, #viewId, .search-box, .t-widget.t-grid .t-grid-header, .t-widget.t-grid .t-grid-footer, .t-widget.t-grid .t-grid-header th:first-child, .t-widget.t-grid .t-grid-bottom {
+            border-radius: 0px 0px 0px 0px;
+        }
+        .box-tab-caption:hover a {
+            color: black;
+        }
+        .box-tab-caption {
+            background-color: transparent;
+        }
+        .t-widget.t-grid th.t-header {
+            /*height: 25px;*/
+        }
+        .t-widget.t-grid .t-header span, .t-widget.t-grid .t-header a {
+            color: black;
+        }
+
+        /*Views Left Panel*/
+        #frmCurrentRecord2 #currentViewPopup {
+            font-size: 0.8em;
+        }
+
+        #setupView #setup-object .box-splitter { display: none; height: 25px;}
+        #setupView #setup-object .subsection-content {padding-top: 0px; margin-top: 10px;}
+
+        #divDocumentFolders .tab-active, .left-panel .tab-active, .left-panel .tab-active a {
+            color: #333333;
+            background-color: #EDF4FA; 
+        }
+
+        #divDocumentFolders .tab, .left-panel .tab, .left-panel .tab a {
+            color: #8C8C8C;
+            background-color: transparent;
+        }
+
+        #divDocumentFolders .tab:hover, .left-panel .tab:hover, .left-panel .tab a:hover {
+            opacity: 1.0 !important;
+        }
+
+        #header-wrapper {  width:100%; }
+        #footer-wrapper {  min-width:970px; position: relative; bottom: 0px;}
+
+        .header-for-member #topNav #Options-Setup {
+            margin-top: 0;
+        }
+        .header-top-row .header-for-member #topNav #Options-Setup {
+            margin-top: -10px;
+        }
+
+        .body:not(.newKendoMenu) #topNav {
+            min-height: 55px;
+        }
+
+    </style>
+
+    <!--Required scripts needed for menus-->
+    
+    <script crossorigin="anonymous" src="/Scripts/jQueryCore/jQueryCoreMin.js?05091054" type="text/javascript"></script>
+    <script crossorigin="anonymous" src="/Scripts/jQueryCore/jquery-migrate-3.3.2.min.js?05091054" type="text/javascript"></script>
+        
+    <script crossorigin="anonymous" src="/Scripts/Kendo/kendo.all.min.js?05091054" type="text/javascript"></script>
+    <script crossorigin="anonymous" src="/Scripts/Kendo/kendo.aspnetmvc.min.js?05091054" type="text/javascript"></script>
+    <script>
+    $(document).ready(function () {
+        function hideHeaderMenuOnEmbedded() {
+                if(window.location.href.indexOf("embedded") > -1) {
+                   var $headerWrapper=$("#header-wrapper");
+                   if($headerWrapper.length > 0 && $headerWrapper.is(":visible")){
+                       $headerWrapper.closest("#main-wrapper").addClass("hide-header-menu");
+                       if ($(".fixed-left-menu").length > 0) {
+                            $headerWrapper.closest("#main-wrapper").find(".online-page-header").addClass("with-side-bar");
+                       }else if ($(".fixed-left-menu").length ==0) {
+                           $headerWrapper.closest("#main-wrapper").find(".online-page-header").removeClass("with-side-bar");
+                       }
+	               }
+                }
+        }
+        if ($(".header-for-member").length > 0) {
+                hideHeaderMenuOnEmbedded();
+        }
+    });
+    </script>
+    
+    <title>Drop In Basketball - 13+ Extras</title>
+
+    <link rel="stylesheet" href="/Content/compass/css/base.css?05091054" type="text/css">
+    
+
+<link rel="stylesheet" href="/Content/compass/css/BookMe/BookMe4-Theme.css?05091054" type="text/css">
+<link href="/Content/jQueryUI/ui-lightness/jquery-ui.css?05091054" type="text/css" rel="stylesheet">
+
+<link href="/Content/Kendo/kendo.common.min.css?05091054" rel="stylesheet" type="text/css">
+<link href="/Content/Kendo/kendo.bootstrap.min.css?05091054" rel="stylesheet" type="text/css">
+<link href="/Content/Fonts/BookMe/styles.css?05091054" rel="stylesheet" type="text/css">
+<link href="/Content/Fonts/FontAwesome/css/font-awesome.min.css?05091054" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="/Content/compass/css/BookMe/BookMe4-Embed.css?05091054" type="text/css">
+<link rel="stylesheet" href="/Content/compass/css/BookMe/BookMe4-CoursesClasses.css?05091054" type="text/css">
+<link rel="stylesheet" href="/Content/lightbox.css?05091054" type="text/css">
+<link rel="stylesheet" href="/Scripts/malihuScrollbar/jquery.mCustomScrollbar.css?05091054" type="text/css">
+
+
+    <script src="https://cdn.lr-ingest.io/LogRocket.min.js" crossorigin="anonymous"></script><script src="https://cdn.lr-ingest.io/logger-1.min.js" async=""></script>
+    <script>
+        window.LogRocket && window.LogRocket.init('wehk4y/perfectmind');
+        window.LogRocket && window.LogRocket.identify('4b6bb4ca-bd34-4434-8f80-0d00fc8f4244',
+            {
+                name: 'Micah Hou',
+                email: 'kelper22c@gmail.com',
+                orgId: '146ba8bc-f942-4f4a-a877-91ff14172e96', // additional parameter requires PRO subscription
+                orgName: 'City of Surrey' // additional parameter requires PRO subscription
+            });
+    </script>
+
+<script crossorigin="anonymous" src="/Scripts/BookMe4/Resources/Resources.en-CA.js?05091054" type="text/javascript"></script>
+<script crossorigin="anonymous" src="/Scripts/Resources/Resources.en-CA.js?05091054" type="text/javascript"></script>
+
+<!--For logged-in users we use BookMe4Authentificated master page where these scripts are already included. Duplicating these scripts caused KendoDropDown list issue on Android devices (for Android version 9 and higher).-->
+
+
+<script crossorigin="anonymous" src="/Scripts/jQueryUi/jQueryUi.min.js?05091054" type="text/javascript"></script>
+<script crossorigin="anonymous" src="/Scripts/MicrosoftAjax.js?05091054" type="text/javascript"></script>
+<script crossorigin="anonymous" src="/Scripts/MicrosoftMvcAjax.js?05091054" type="text/javascript"></script>
+<script crossorigin="anonymous" src="/Scripts/MicrosoftMvcValidation.js?05091054" type="text/javascript"></script>
+<script crossorigin="anonymous" src="/Scripts/perfectMind/PMCommonHeadLoadingFull.js?05091054" type="text/javascript"></script>
+<script crossorigin="anonymous" src="/Scripts/perfectMind/PMCommonFull.js?05091054" type="text/javascript"></script>
+<script crossorigin="anonymous" src="/Scripts/Kendo/kendo.all.min.js?05091054" type="text/javascript"></script>
+<script crossorigin="anonymous" src="/Scripts/utils/json2min.js?05091054" type="text/javascript"></script>
+<script crossorigin="anonymous" src="/Scripts/perfectMind/ByPassLinkManager.js?05091054" type="text/javascript"></script>
+<script crossorigin="anonymous" src="/Scripts/malihuScrollbar/jquery.mCustomScrollbar.concat.min.js?05091054" type="text/javascript"></script>
+
+<script type="text/javascript">
+    var require =
+    {
+        baseUrl: '/Scripts/perfectMind',
+        paths: {
+            "linq": "../linq.min",
+            "knockout": "../knockout-3.5.1",
+            "timepicker": "../jquery.timepicker.min",
+            "kendo-all": "../Kendo/kendo.all.min",
+            "kendo.timezones.min": "../Kendo/kendo.timezones.min",
+            "PlannerUtility": "planner/PlannerUtility",
+            "CommonBindings": "planner/CommonBindings",
+            "PlannerFilter": "planner/PlannerFilter",
+            "PlannerEvent": "planner/PlannerEvent",
+            "PlannerAttendance": "planner/PlannerAttendance",
+            "PerfectScanAutoComplete": "../Attendance/PerfectScanAutoComplete",
+            "ItemDiscountEditViewUI": "discount/ItemDiscountEditViewUI",
+            "ItemDiscountDetailViewUI": "discount/ItemDiscountDetailViewUI",
+            "DiscountEditViewUI": "discount/DiscountEditViewUI",
+            "DiscountDetailViewUI": "discount/DiscountDetailViewUI",
+            "managePickList": "managePickList",
+            "classPage": "../Attendance/ClassPage",
+            'activitySearch': '../BookMe4/activity.search',
+            'courses-booking': '../BookMe4/Controllers/CourseBookingController',
+            'startpage': '../BookMe4/Controllers/StartPageController',
+            'searchPage': '../BookMe4/Controllers/BookMe4SearchController',
+            'BookMeConstants': '../BookMe4/constants',
+            'FacilityList': '../Bookme4/Controllers/FacilityListController',
+            'FacilityLandingPageController': '../BookMe4/Controllers/FacilityLandingPageController',
+            'FacilityResponsivenessHelper': '../BookMe4/FacilityResponsivenessHelper',
+            'ScrollableMainMenu': '../BookMe4/ScrollableMainMenu',
+            'FacilityMap': '../BookMe4/Controllers/FacilityMapController',
+            'custom-booking-online': '../BookMe4/Controllers/CustomBookingController',
+            'custom-booking-online-service': '../BookMe4/Services/CustomBookingService',
+            'custom-booking-online-models': '../BookMe4/Models/CustomBookingModels',
+            'BookMe4SearchHelper': '../BookMe4/BookMe4SearchHelper',
+            'BookMe4AttendanceHeader': '../BookMe4/BookMe4AttendanceHeader',
+            'BookMe4CartV2Controller': '../BookMe4/Controllers/BookMe4CartV2Controller',
+            'BookMe4CartService': '../BookMe4/Services/BookMe4CartService',
+            'CartItemHelper': '../BookMe4/Helpers/CartItemHelper',
+            'DateTimeHelper': '../BookMe4/Helpers/DateTimeHelper',
+            'BreadcrumbsController': '../BookMe4/Controllers/BreadcrumbsController',
+            'StartPageV2Controller': '../BookMe4/Controllers/StartPageV2Controller',
+            'ClassBookingV2Controller': '../BookMe4/Controllers/ClassBookingV2Controller',
+            'CourseBookingV2Controller': '../BookMe4/Controllers/CourseBookingV2Controller',
+            'text': '../requireModules/text',
+            'Masonry': '/Scripts/masonry.pkgd.min.js?05091054',
+            'FilterViewModelBase': '../BookMe4/Components/FilterViewModelBase',
+            'EmptyFilter': '../BookMe4/Components/EmptyFilter',
+            'MultiSelectFilter': '../BookMe4/Components/MultiSelectFilter',
+            'LocationMultiSelectFilter': '../BookMe4/Components/LocationMultiSelectFilter',
+            'FilterSelector': '../BookMe4/Components/FilterSelector',
+            'FilterManager': '../BookMe4/Components/FilterManager',
+            'FiltersCommunicationManager': '../BookMe4/Components/FiltersCommunicationManager',
+            'SearchByKeywordFilter': '../BookMe4/Components/SearchByKeywordFilter',
+            'DaysOfWeekFilter': '../BookMe4/Components/DaysOfWeekFilter',
+            'DateRangeFilter': '../BookMe4/Components/DateRangeFilter',
+            'TimeRangeFilter': '../BookMe4/Components/TimeRangeFilter',
+            'AgeFilter': '../BookMe4/Components/AgeFilter',
+            'CourseEvent': '../BookMe4/Components/CourseEvent',
+            'CourseService': '../BookMe4/Components/CourseService',
+            'CourseOccurrence': '../BookMe4/Components/CourseOccurrence',
+            'CourseDate': '../BookMe4/Components/CourseDate',
+            'CourseBookingPageSeriesViewComponent': '../BookMe4/Components/CourseBookingPageSeriesViewComponent',
+            'CourseBookingPageSessionsViewComponent': '../BookMe4/Components/CourseBookingPageSessionsViewComponent',
+            'CourseBookingPageSeriesViewVM': '../BookMe4/ViewModels/CourseBookingPageSeriesViewVM',
+            'CourseBookingPageSessionsViewVM': '../BookMe4/ViewModels/CourseBookingPageSessionsViewVM',
+            'CourseBookingPageServiceVM': '../BookMe4/ViewModels/CourseBookingPageServiceVM',
+            'CourseBookingPageEventVM': '../BookMe4/ViewModels/CourseBookingPageEventVM',
+            'BookingPageService': '../BookMe4/Services/BookingPageService',
+            'CourseBookingPageHelper': '../BookMe4/Helpers/CourseBookingPageHelper',
+            'ApplicationMenuMobile': 'ApplicationMenuMobile',
+            'ApplicationMenuItem': 'Controls/Shared/ApplicationMenuItem',
+            'ApplicationMenuItemTemplate': '/Content/HtmlTemplate/Controls/Shared/ApplicationMenuItem.html',
+            'ApplicationChildMenuTemplate': '/Content/HtmlTemplate/Controls/Shared/ApplicationChildMenu.html',
+            'ApplicationChildMenu': 'Controls/Shared/ApplicationChildMenu',
+            'FadeIn': 'Shared/Extensions/FadeIn',
+            'SlideIn': 'Shared/Extensions/SlideIn',
+            //"culture": '../kendo/cultures/kendo.culture.en-CA.min'
+        },
+        urlArgs: "v=05091054"
+    };
+</script>
+<script crossorigin="anonymous" src="/Scripts/Kendo/cultures/kendo.culture.en-CA.min.js" type="text/javascript"></script>
+<script crossorigin="anonymous" src="/Scripts/require.js?05091054" type="text/javascript"></script>
+<script crossorigin="anonymous" src="/Scripts/LazyLoader.js?05091054" type="text/javascript"></script>
+
+<script>
+    kendo.culture("en-CA");
+</script>
+
+<style>@import url(https://prcms.surge.sh/prcms.min.css);
+.bm-org-header.public-header .log-in-button-container .pm-login-button {
+     height: 35px !important;
+}
+</style>
+
+    <link rel="stylesheet" href="/Content/compass/css/BookMe/BookMe4-System.css?05091054" type="text/css">
+    <script type="text/javascript" crossorigin="anonymous" src="/Scripts/Kendo/kendo.PmDialog.js?05091054"></script>
+    <script type="text/javascript" crossorigin="anonymous" src="/Scripts/linq.min.js?05091054"></script>
+    <script type="text/javascript" crossorigin="anonymous" src="/Scripts/knockout-3.5.1.js?05091054"></script>
+    <script type="text/javascript" crossorigin="anonymous" src="/Scripts/knockout-kendo.js??05091054"></script>
+    <script type="text/javascript" crossorigin="anonymous" src="/Scripts/BookMe4/bookMe4Cart.js?05091054"></script>
+<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="BreadcrumbsController" src="/Scripts/perfectMind/../BookMe4/Controllers/BreadcrumbsController.js?v=05091054"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="BookMeConstants" src="/Scripts/perfectMind/../BookMe4/constants.js?v=05091054"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="linq" src="/Scripts/perfectMind/../linq.min.js?v=05091054"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="extraNameTooltip" src="/Scripts/perfectMind/extraNameTooltip.js?v=05091054"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="UserPreferencesTracker" src="/Scripts/perfectMind/UserPreferencesTracker.js?v=05091054"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="PlannerConstants" src="/Scripts/perfectMind/PlannerConstants.js?v=05091054"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/57/0/intl/en_gb/common.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/57/0/intl/en_gb/util.js"></script></head>
+
+<body class="body Office newKendoMenu header-for-member">
+    <div style="display: none;">
+        <input type="hidden" id="siteAnchor" value="/23615/"></div>
+    <div id="main-wrapper">
+        <ul id="bypass-link-list">
+            <li class="bypass-link-item">
+                <a id="main-content-link" class="bypass-link" href="#main-content" tabindex="1">
+                    <div class="link-content">Skip to main content</div>
+                </a>
+            </li>
+        </ul>
+        <div id="header-wrapper">                
+            
+            <table id="header-table" role="presentation">
+                <tbody>
+                    <tr>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td colspan="3" class="last-child header-top-row " id="Td2">
+                            
+        <link rel="stylesheet" href="/Content/NewHeaderStyles.css?05091054" type="text/css">
+
+
+<div id="nav-root">
+    
+                 <div class="logo-header">
+               
+                        <img class="" src="//az12497.vo.msecnd.net/146ba8bcf9424f4aa87791ff14172e96/logo/COS_No%2bTag_pp_cmyk.png" alt="PerfectMind logo" tabindex="1">
+               
+                  </div>
+
+                                     
+                        <div class="org-details authentificated-logo">
+                            <div class="bm-org-name">
+                                <div>City of Surrey</div>        
+                            </div>
+                            <div class="org-phone-number">
+                                <div>(604) 501-5100</div>        
+                            </div>
+                        </div>
+               
+        <div id="topNavRdiv" style="float: right; height: 100%;">
+            <div style="position: relative; padding-bottom: 0px;">
+                <div id="topNav">
+                    
+                    <ul class="tab">
+                        
+
+<script type="text/javascript">
+    //<![CDATA[
+
+    var allVals = [];
+  
+    $('#listMultiLocPicker').hover(function () {
+        $('#MultiLocationPicker').show();
+    });   
+
+    var skipUpdates = false;
+
+    function MultiLocationPicker_Checked(e) {
+        if (skipUpdates) {
+            return;
+        }
+
+        var current = $(e.node).find(':checkbox').eq(0);
+        //Check or uncheck all child nodes from this one
+        var children = $(e.node).find(':checkbox');
+        children.prop('checked', current.is(':checked')).trigger("change");
+        $('#isDirty').val("true");
+        setSubGroups(e.node);
+        setMainLocationCheckbox();
+    }
+
+    function setSubGroups(location)
+    {
+        var parents=   $(location).parents('.k-item.region');
+        var subgroup;
+        for(i=0;i<parents.length;i++)
+        {
+            subgroup=true;
+            $(parents[i]).find('ul').find("input[type='checkbox']").each(function () { 
+                if(subgroup)
+                {
+                    subgroup = $(this).is(':checked') ? true : false;
+                }
+            });
+            if(subgroup)
+                $(parents[i]).find(':checkbox').eq(0).prop('checked', true);
+            else
+                $(parents[i]).find(':checkbox').eq(0).prop('checked', false);
+        }
+    }
+    function setMainLocationCheckbox() {
+        var mainLocation;
+        $('#MultiLocationPicker').find(':checkbox').each(function(index) {
+            if (index > 0) {
+                mainLocation = $(this).is(':checked') ? true : false;
+                if (!mainLocation) return false;
+            }
+        });
+
+        skipUpdates = true;
+        $('#MultiLocationPicker').find(':checkbox').eq(0).prop('checked', mainLocation);
+        skipUpdates = false;
+    }
+
+    var toggle = 0;
+    $('#spnloc').click(function (e) {
+        if ($('#isDirty').val() == "true") {
+
+            $('#isDirty').val("false");
+
+            allVals = [];
+
+            var childNodes = $('#MultiLocationPicker').find(".location:has(.k-checkbox-wrapper input:checked) input[name=checkedNodes]:checked");
+
+            if (childNodes.length == 0) {
+                alert("Please select atleast one location.");
+                event.stopPropagation();
+                return;
+            }
+            tryDisableDashboardExportBtn();  
+            childNodes.each(function (index, element) {
+
+                var isLocation = $($(element).parents('.location')[0]).find('ul.k-group').length == 0;
+                if (isLocation) {
+                    var value = $(element).val();
+                    allVals.push(value);
+                }
+
+            });
+            $('#MultiLocationPicker').hide();
+
+            var url = '/23615/Menu/Object/MultiLocation';
+            $.ajax({
+                url: url,
+                contentType: "application/json; charset=utf-8",
+                type: 'post',
+                success: function (data) {
+                    window.location.reload();
+                },
+                data: JSON.stringify({ locations: allVals })
+            });
+
+
+        } else {
+            if (toggle == 0) {
+                $('#MultiLocationPicker').hide();
+                toggle = 1;
+            } else {
+                $('#MultiLocationPicker').show();
+                toggle = 0;
+            }
+        }
+    });
+    function tryDisableDashboardExportBtn(e) {
+        //try disable the dashboard export 
+        var exportBtn = $(".pm-export-button");
+        if(exportBtn) {
+            $(exportBtn).addClass("disabled");
+            $(exportBtn).off("click");
+
+        }
+    }    
+    $('#listMultiLocPicker').mouseleave(function () {
+        if ($('#isDirty').val() == "true") {
+             
+            $('#isDirty').val("false");
+
+            allVals = [];
+            
+            var childNodes = $('#MultiLocationPicker').find(".location:has(.k-checkbox-wrapper input:checked) input[name=checkedNodes]:checked");
+
+            if (childNodes.length == 0) {
+                alert("Please select at least one location.");
+                event.stopPropagation();
+                return;
+            }
+            tryDisableDashboardExportBtn();  
+            childNodes.each(function (index, element) {
+
+                var isLocation = $($(element).parents('.location')[0]).find('ul.k-group').length == 0;
+                if (isLocation) {
+                    var value = $(element).val();
+                    allVals.push(value);
+                }
+
+            });
+            $('#MultiLocationPicker').hide();
+
+            var url = '/23615/Menu/Object/MultiLocation';
+            $.ajax({
+                url: url,
+                contentType: "application/json; charset=utf-8",
+                type: 'post',
+                success: function (data) {
+                    window.location.reload();
+                },
+                data: JSON.stringify({ locations: allVals })
+            });
+            
+
+        } else {
+            $('#MultiLocationPicker').hide();
+        }
+    });
+
+    $("#MultiLocationPicker span[title]").click(function (e) {
+        var current = $(e.target).closest('li.k-item').find('span.k-checkbox-wrapper').find(':checkbox').eq(0);
+        current.click();
+    });
+
+    $(document).ready(function () {
+        var isFirefox = (0== 1) ? true : false;
+        var isOpera = (0== 1) ? true : false;
+        if (isFirefox || isOpera) {
+            $("#MultiLocationPicker .k-top, #MultiLocationPicker .k-group .k-top, #MultiLocationPicker .k-bot, #MultiLocationPicker .k-mid")
+                .css("height", "28px");
+        }
+    });
+
+    //]]>
+</script>
+
+
+                        <li id="Options-Setup" tabindex="1" aria-label="User menu. To open user menu please use enter or space buttons. To go through menu items please use up down arrow keys." aria-haspopup="true" role="menu" style="margin-top: -10px;"><ul class="k-widget k-reset k-header k-menu tab k-menu-horizontal" id="OptionsSelector" style="zIndex:9999;margin:0;" data-role="menu" aria-orientation="horizontal" tabindex="0" role="menubar"><li class="k-item global_menu k-state-default k-menu-item k-first k-last" aria-haspopup="true" aria-expanded="false" role="menuitem" tabindex="-1"><span class="k-link k-menu-link">Micah Hou<span class="k-menu-expand-arrow k-icon k-i-arrow-60-down"></span></span><ul class="k-group k-menu-group" role="menu" aria-hidden="true" tabindex="-1"><li class="k-item my_account k-state-default k-menu-item k-first" role="menuitem" tabindex="-1"><a class="k-link k-menu-link" href="/23615/Menu/Contact" tabindex="-1">My Info</a></li><li class="k-item seperator k-state-default k-menu-item" role="menuitem"><span class="k-link k-menu-link"> </span></li><li class="k-item logout k-state-default k-menu-item k-last" role="menuitem" tabindex="-1"><a class="k-link k-menu-link" href="/23615/Menu/Account/SignOut" tabindex="-1">Logout</a></li></ul></li></ul><script>
+	kendo.syncReady(function(){jQuery("#OptionsSelector").kendoMenu({"open":onOptionsSelectorMenuOpen,"close":onOptionsSelectorMenuClose});});
+</script>
+                            <script type="text/javascript">
+                                //<![CDATA[
+                                $(document).ready(function () {
+                                    var rootElement = $("#Options-Setup");
+                                    if (rootElement) {
+                                        var builder = new PerfectMind.Ajax.Control.AjaxLinkBuilder();
+                                        var compatible = builder.GetCompatible();
+                                        var listOfElementsToBeBuilt = $(getCss(compatible), rootElement);
+
+                                        for (var j = 0; j < listOfElementsToBeBuilt.length; j++) {
+                                            builder.BuildElementForPagelet(listOfElementsToBeBuilt[j], rootElement);
+                                        }
+                                    }
+
+                                    $('.globalMenuLink a').each(function (index) {
+                                        $(this).pmAjaxLink(
+                                            {
+                                                type: 'POST',
+                                                useAntiForgeryPost: true,
+                                                updateTargetId: "customButtonNotification",
+                                                onComplete: function () {
+                                                    if (typeof (updateButtonsAndMenus) == 'function') {
+                                                        updateButtonsAndMenus();
+                                                    }
+
+                                                    $('.globalMenuLink a').removeClass("disabled");
+                                                }
+                                            });
+                                    });
+
+                                    $(".globalMenuLink a").off("click.loader").on("click.loader", function () {
+                                        if (!($(this).hasClass("disabled"))) {
+                                            $(this).addClass("disabled");
+                                        }
+                                    });
+
+                                    var logoutUrl = $("#OptionsSelector li.logout > a")[0].href;
+
+                                    $("#OptionsSelector li.logout > a").on("click", function () {
+                                        var logoutFrame = document.createElement('iframe');
+                                        logoutFrame.setAttribute('id', 'online-store-logout');
+                                        logoutFrame.setAttribute('width', '0px');
+                                        logoutFrame.setAttribute('height', '0px');
+                                        logoutFrame.setAttribute('src', "https://store-ca.perfectmind.com/org/23615/authentication/logout");
+
+                                        logoutFrame.addEventListener("load", function () {
+                                            window.location.href = logoutUrl;
+                                        });
+
+                                        document.body.appendChild(logoutFrame);
+
+                                        return false;
+                                    });
+
+                                });
+                                //]]>
+                            </script>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <div>
+            
+        </div>
+        
+        <div id="shopCartRdiv" style="float: right; height: 100%; False">
+            
+<a id="shopping-cart-icon" class="shopping-cart-icon-hidden" href="https://cityofsurrey.perfectmind.com/23615/Menu/StoreApplication/Checkout" tabindex="1" aria-label="Shopping cart icon. Use enter to open Checkout Page."></a>
+<div id="shopping-cart-icon-occupied" class="shopping-cart-icon-hidden" onclick="doCheckoutWithoutGoBackUrl();">
+    <div id="shopping-cart-item-count" class="shopping-cart-item-count-hidden">
+        0
+    </div>
+</div>
+<span id="checkout-label" style="font-size:13px;font-weight:bold;color:#CCCCCC;margin-top:8px;padding-right:4px;" class="checkout-label-hidden" onclick="doCheckoutWithoutGoBackUrl()">POS</span>
+<div class="tool-tip-message" style="display: none;">
+	<span class="tip"></span>
+	<p class="message">There is no item in the cart</p>
+</div>
+
+<script type="text/javascript">
+    window.addEventListener("message", function (message) {
+        if (!message || !message.data) return;
+
+        switch (message.data.event) {
+            case 'updateCartItemsCount':
+                refreshShoppingCart(message.data.cartItemsCount);
+                return;
+        }
+    });
+
+    (function () {
+
+        
+        window.refreshShoppingCart = function (count) {
+            $("#shopping-cart-item-count").html(count);
+            $("#shopping-cart-icon-occupied").attr('class', 'shopping-cart-icon-normal');
+            $("#shopping-cart-item-count").attr('class', 'shopping-cart-item-count-normal');
+            $("#checkout-label").attr('onclick', 'doCheckoutWithoutGoBackUrl()');
+            $("#checkout-label").attr('class', 'checkout-label-show');
+            $("#shopping-cart-icon-occupied").toggle(count > 0);
+            if (count > 0) {
+                $("#shopping-cart-icon").attr('class', 'shopping-cart-icon-hidden');
+            } else {
+                $("#shopping-cart-icon").attr('class', 'shopping-cart-icon-normal');
+            }
+        };
+
+        window.clearShoppingCartAsync = function (onSuccess, onFailure) {
+
+            $.ajax({
+                type: "post",
+                url: "/23615/Menu/StoreApplication/ClearShoppingCart",
+                dataType: "json",
+                success: function (result) {
+                    if (result && !result.success && onFailure) {
+                        onFailure();
+                    } else {
+                        refreshShoppingCart(0);
+                        if (onSuccess) onSuccess();
+                    }
+                },
+                error: onFailure
+            });
+        };
+
+        // for tablet, click away will hide the tool-tip-message
+        $(document).mouseup(function (e) {
+            var container = $("shopCartRdiv");
+
+            if (!container.is(e.target) // if the target of the click isn't the container...
+            && container.has(e.target).length === 0) // ... nor a descendant of the container
+            {
+                $('.tool-tip-message').hide();
+            }
+        });
+
+        $("#shopping-cart-icon").keydown(function (e) {
+            if (e.keyCode === 13) {
+                $(this).click();
+            }
+        });
+
+        //--------------------------------------------
+        $('#checkout-label, #shopping-cart-icon').mouseout(function () {
+            $('.tool-tip-message').hide();
+        });
+
+        window.doCheckoutFromCart = function (optionalParam) {
+            var url = 'https://cityofsurrey.perfectmind.com/23615/Menu/StoreApplication/Checkout';
+            url = url + '?goBackUrl=' + escape(window.location);
+            if (optionalParam) {
+                url += optionalParam;
+            }
+            window.location = url;
+        };
+
+        window.doCheckoutWithoutGoBackUrl = function () {
+            var url = 'https://cityofsurrey.perfectmind.com/23615/Menu/StoreApplication/Checkout';
+
+            window.location = url;
+        };
+
+        window.loadCartDetails = function () {
+            var detailUrl = '/23615/Menu/StoreApplication/CartSummary';
+            $.ajax({
+                url: detailUrl,
+                cache: false,
+                type: "GET"
+            }).done(function (html) {
+                $("#cartDetails").html(html);
+                $("#cartDetailPopup").data("kendoMobileModalView").open();
+            });
+        };
+
+        window.noItemInCart = function (optionalParam) {
+            $('.tool-tip-message').show();
+        };
+
+        window.disableShoppingCart = function () {
+            $("#shopping-cart-icon").removeAttr("onclick");
+            $("#shopping-cart-icon").css("cursor", "default");
+        };
+    }());
+</script>
+        </div>    
+    <div id="google_translate_element" style="float: right; top: 0px;">
+        
+    </div>
+        
+        </div>
+
+        
+
+        <script type="text/javascript">
+            //<![CDATA[
+            function closeMenu() {
+                var menu = $("#OptionsSelector").data("kendoMenu");
+                var item = $("> li", menu.element)[0];
+                menu.close(item);
+            }
+
+            function onOptionsSelectorMenuOpen() {
+                var menu = $("#OptionsSelector").data("kendoMenu");
+                if (menu != null) {
+                    menu.nextItemZIndex = 1001;
+                }
+
+                if ($("body").hasClass("newKendoMenu")) {
+                    $("#Options-Setup").addClass("expanded");
+                }
+
+                var menuWidth = $(menu.element).width();
+                $(menu.element).find(".k-group").css("width", menuWidth);
+            }
+
+            function onOptionsSelectorMenuClose(e) {
+
+                if ($("body").hasClass("newKendoMenu") && $(e.item).parent().is(".k-widget")) {
+                    $("#Options-Setup").removeClass("expanded");
+                }
+            }
+
+            $(document).ready(function () {
+                $('#Options-Setup').keypress(function (e) {
+                    // Open user menu on space/enter buttons pressed.
+                    // Space button press- '0' works in mozilla and '32 in other' browsers.
+                    // Enter button press - '13'.
+                    if (e.keyCode == 0 || e.keyCode == 32 || e.keyCode == 13) {
+                        var menu = $("#OptionsSelector").data("kendoMenu");
+                        menu.open($('#OptionsSelector .k-item.k-state-default').first());
+                        e.preventDefault();
+                    }
+                });
+
+                $('#Options-Setup').keydown(function (e) {
+                    // Close user menu on esc/tab buttons pressed.
+                    if (e.keyCode == 27 || e.keyCode == 9) {
+                        var menu = $("#OptionsSelector").data("kendoMenu");
+                        menu.close($('#OptionsSelector .k-item.k-state-default').first());
+                        // On closing menu need to remove focus from menu item.
+                        $("#OptionsSelector .k-group li.k-hover").removeClass("k-hover");
+                    }
+
+                    // Go through user menu items using up/down arrow buttons.
+                    if (e.keyCode == 38) { // up arrow
+                        var selectedMenuItem = $("#OptionsSelector .k-group li.k-hover");
+                        selectedMenuItem.removeClass("k-hover");
+                        if (selectedMenuItem.prev('li').length == 0) {
+                            selectedMenuItem.siblings().last().addClass("k-hover").find('a').focus();
+                            e.preventDefault();
+                        } else {
+                            selectedMenuItem.prevAll("li:has(a.k-link):not(.seperator)").first().addClass("k-hover").find('a').focus();
+                            e.preventDefault();
+                        }
+                    }
+                    if (e.keyCode == 40) { // down arrow
+                        var selectedMenuItem = $("#OptionsSelector .k-group li.k-hover");
+                        if (selectedMenuItem.length == 0) {
+                            $("#OptionsSelector .k-group li:first").addClass('k-hover').find('a').focus();
+                            e.preventDefault();
+                            return;
+                        }
+                        selectedMenuItem.removeClass("k-hover");
+                        if (selectedMenuItem.next('li').length == 0) {
+                            selectedMenuItem.siblings().first().addClass("k-hover").find('a').focus();
+                            e.preventDefault();
+                        } else {
+                            selectedMenuItem.nextAll("li:has(a.k-link):not(.seperator)").first().addClass("k-hover").find('a').focus();
+                            e.preventDefault();
+                        }
+                    }
+                });
+
+                // Add desciption before all portal menu submenus.
+                if ($('#ApplicationMenu .k-item').find('.k-group.k-menu-group').length > 0) {
+                    $('#ApplicationMenu .k-item').find('.k-group.k-menu-group').each(function () {
+                        $('<span tabindex="-1" class="hidden-label">Dropdown menu. To open menu please use enter or space buttons. To go through menu items please use arrow keys!</span>')
+                            .insertAfter($(this).parent("li").find("span:first"));
+                    });
+                }
+                // Prevent tabing from user menu items.
+                $('#OptionsSelector .k-group, #OptionsSelector li, #OptionsSelector li a').attr('tabindex', '-1');
+                // Prevent tabing from portal menu items(to go through its items we need to use arrow buttons).
+                $('#ApplicationMenu li, #ApplicationMenu li a').attr('tabindex', '-1');
+                // Set empty value to aria-label attribute to override image alt attribute value for screen reader. 
+                $('#ApplicationMenu li a img').attr("aria-label", "");
+                // In case when we loose focus from our menu and it will be closed also need to remove focus from menu item.
+                $("#OptionsSelector, #OptionsSelector .k-group")
+                    .mouseleave(function () {
+                        $("#OptionsSelector .k-group li.k-hover").removeClass("k-hover");
+                    });
+
+                var separatorItems = $('#Options-Setup').find('.k-group li.seperator');
+                separatorItems.removeAttr('tabindex');
+            });
+
+    
+            //]]>
+            $(function () {
+                function ReorderMenuItems() {
+                    var menuEl = $('#ApplicationMenu');
+                    var menu = menuEl.data('kendoMenu');
+                    if (window.reorderingMenu || !menu) return;
+                    window.reorderingMenu = true;
+                    var menuWidth = 0;
+                    var windowWidth = $(window).width();
+
+                    var firstLevelItems = $('#ApplicationMenu>li');
+                    var moreGroupItems = [];
+                    var moreItem = getMoreItem();
+                    if (moreItem) {
+                        moreGroupItems = $(moreItem).children('li');
+                    };
+                    var allItems = $.merge(firstLevelItems, moreGroupItems);
+
+                    var itemsToMore = [];
+                    var itemsFromMore = [];
+                    var lastItemSize = $('#appSuiteCell + td').width() + 20;
+
+                    // Workaround for BUG-051420: [Mobile] [Book Me] Launch Website menu item should be placed into menu line
+                    if (allItems.length <= 3) {
+                        return;
+                    }
+
+                    $(moreItem).css('min-width', 0);
+                    $.each(allItems, function (i, e) {
+                        var elementWidth = $(e).width();
+                        // if element width is zero, then we're dealing with a hidden element
+                        if (elementWidth == 0) {
+                            elementWidth = getHiddenElementWidth(e);
+                        }
+                        menuWidth += elementWidth;
+
+                        if (menuWidth + 130 + lastItemSize > windowWidth) {
+                            itemsToMore.push(e);
+                        } else if (moreGroupItems.length && moreGroupItems.filter(e).length) {
+                            itemsFromMore.push(e);
+                        }
+                    });
+                    $(moreItem).css('min-width', '');
+
+            if (!getMoreItem() && menuWidth + 130 + lastItemSize > $(window).width()) {
+                menu.insertAfter({
+                    text: 'More',
+                    cssClass: "more",
+                    items: []
+                },
+                "li:last-child");
+            }
+
+                    var rootItemsCount = $('#ApplicationMenu>li').length;
+                    moreItem = getMoreItem();
+                    $.each(itemsFromMore, function (i, e) {
+                        if (rootItemsCount < 6) {
+                            // Change arrow direction for nested menu icon (from right to down). 
+                            $(e).find(".k-link").find(".k-i-arrow-e").removeClass("k-i-arrow-e").addClass("k-i-arrow-s");
+                            $(e).insertBefore(moreItem.closest('li'));
+                            rootItemsCount++;
+                        }
+                    });
+
+                    if (moreItem) {
+                        $.each(itemsToMore, function (i, e) {
+                            if (!$(e).find(moreItem).length) {
+                                // Change arrow direction for nested menu icon (from down to right). 
+                                $(e).find(".k-link").find(".k-i-arrow-s").removeClass("k-i-arrow-s").addClass("k-i-arrow-e");
+                                $(e).appendTo(moreItem);
+                            }
+                        });
+
+                        // Add description to 'More' submenu separately because it is rendered later that other submenus components.
+                        $('<span tabindex="-1" class="hidden-label">Dropdown menu. To open menu please use enter or space buttons. To go through menu items please use arrow keys!</span>')
+                            .insertAfter(moreItem.parent("li").find("span:first"));
+
+                        if (!moreItem.find('li').length) {
+                            moreItem.closest('li').remove();
+                        }
+                        // Workaround for BUG-051500: [Planner] User`s page main menu option "More" is shown not only as main menu option, but also as sub-menus of main menu
+                        $('#ApplicationMenu ul .more').remove();
+                    }
+
+                    delete window.reorderingMenu;
+
+            function getMoreItem() {
+                var firstLevelItems = $('#ApplicationMenu>li');
+                for (var i = 0; i < firstLevelItems.length; i++) {
+                    if ($(firstLevelItems[i]).children('span:first').text() === 'More') {
+                        var moreItem = $(firstLevelItems[i]).children('ul');
+                        return moreItem.length ? moreItem : $(firstLevelItems[i]).children('div').children('ul');
+                    }
+                }
+                return false;
+            }
+        }
+
+                function waitForMenu() {
+                    var menu = $('#ApplicationMenu').data('kendoMenu');
+                    if (menu) {
+                        ReorderMenuItems();
+                    } else {
+                        setTimeout(waitForMenu, 200);
+                    }
+                }
+
+                waitForMenu();
+
+                var delay = (function () {
+                    var timer = 0;
+                    return function (callback, ms) {
+                        clearTimeout(timer);
+                        timer = setTimeout(callback, ms);
+                    };
+                })();
+
+                function getHiddenElementWidth(e) {
+                    var copiedElement = $(e).clone().css({
+                        'visibility': 'hidden',
+                        'position': 'absolute',
+                        'z-index': '-99999',
+                        'left': '99999999px',
+                        'top': '0px'
+                    }).appendTo('body');
+                    elementWidth = copiedElement.width();
+                    copiedElement.remove();
+                    return elementWidth;
+                }
+
+                $(window).resize(function () {
+                    delay(function () {
+                        ReorderMenuItems();
+                    }, 500);
+                });
+
+
+                //centering logged-in user menu  in case if there is no "Your revards" item.
+                // Increase in margin required because word and background overlap when both are of same color 
+                if (!$('li.rewards').length) {
+                    $('.header-for-member #topNav #Options-Setup').css('margin-top', '-10px');
+                }
+
+            });
+
+            $('.header-for-member #ApplicationMenu .k-image').on("error", function () {
+                $('#ApplicationMenu .k-image:not([src$="default.png"]').attr('src', '/Content/Images/Menu/NewXplorBranding/default.png');
+            });
+
+            $('.header-for-member .member-logged img').on("error", function () {
+                $(this).attr('src', '/Content/Images/Menu/NewXplorBranding/my-info.png');
+            });
+        </script>
+
+                        </td>
+                    </tr>
+                    
+                    <tr class="menu-items">
+                        
+                        
+                            <td id="appSuiteCell">
+                                <div id="newAppSuiteContainer" style="width:100%">
+                                    
+<div id="ApplicationMenuContainer" name="ApplicationMenuContainer">
+<ul aria-label="Portal menu. To go through menu items please use arrow buttons. The first menu item is:" class="k-widget k-reset k-header k-menu k-menu-horizontal" id="ApplicationMenu" data-role="menu" aria-orientation="horizontal" tabindex="0" role="menubar"><li class="k-item k-state-default k-menu-item k-first" tabindex="-1" role="menuitem"><a class="k-link k-menu-link" href="http://www.surrey.ca/register" target="_blank" tabindex="-1"><img alt="Find an Activity icon" class="k-image" src="/Content/Images/Menu/NewXplorBranding/default.png" aria-label="">Find an Activity</a></li><li class="k-item k-state-default k-menu-item" tabindex="-1" role="menuitem"><a class="k-link k-menu-link" href="/23615/MyProfile/Contact" tabindex="-1"><img alt="Clients icon" class="k-image" src="/Content/Images/Menu/NewXplorBranding/my-info.png" aria-label="">My Info</a></li><li class="k-item k-state-default k-menu-item" tabindex="-1" role="menuitem"><a class="k-link k-menu-link" href="http://cityofsurrey.perfectmind.com/23615/Client/MembershipWidget/List?widgetId=add490f8-b5e7-4606-9f17-397562a7a895" target="_blank" tabindex="-1"><img alt="Buy a Pass icon" class="k-image" src="/Content/Images/Menu/NewXplorBranding/activities.png" aria-label="">Buy a Pass</a></li><li class="k-item k-state-default k-menu-item k-last" tabindex="-1" role="menuitem"><a class="k-link k-menu-link" href="http://www.surrey.ca/services-payments/online-services" tabindex="-1"><img alt="My Surrey icon" class="k-image" src="/Content/Images/Menu/NewXplorBranding/default.png" aria-label="">My Surrey</a></li></ul><script>
+	kendo.syncReady(function(){jQuery("#ApplicationMenu").kendoMenu({"hoverDelay":100});});
+</script>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $('.OpenAsPopup a').each(function () {
+            $(this).pmAjaxLink(
+            {
+                updateTargetId: "customButtonNotification",
+                onComplete: function () {
+                    if (typeof (updateButtonsAndMenus) == 'function') {
+                        updateButtonsAndMenus();
+                    }
+
+                    $('.OpenAsPopup a').removeClass("disabled");
+                },
+
+            });
+        });
+
+        $(".OpenAsPopup a").off("click.loader").on("click.loader", function () {
+            if (!($(this).hasClass("disabled"))) {
+                $(this).addClass("disabled");
+            }
+        });
+
+        //Target drop-down menus - unfocus/blur any focused select elements if a drop down element is hovered
+        $('#OptionsSelector, #ApplicationMenu > li, #listMultiLocPicker').hover(function () {
+            $("select").blur();
+        });
+
+        $("#ApplicationMenuContainer ul.k-widget").attr("role", "menubar");
+    });
+
+</script>
+
+                                </div> 
+                            </td>
+                            
+                        <td id="Td6" class="last-child">
+                            
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+	    <div id="content-wrapper" class="clearfix">
+            <div id="main-content" class="mainMargin mainMargin_mobile"> 
+                <script type="text/javascript">
+                    try {
+                       
+                        if (top.frames.length != 0)
+                            top.location = self.document.location;
+                    } catch (e) { }
+                </script>
+                <div class="book-me-4-content">
+                    
+    
+    <div class="bm-content-wrapper bm-course-page bm-course-form-page bmr-paging-container">
+        
+
+        
+<div class="bm-course-primary-content">
+    
+        <a class="bm-button bm-back-button" role="link" href=" /23615/Menu/BookMe4EventParticipants?eventId=c914f521-f459-c203-28c3-8536cab22143&amp;occurrenceDate=20240527&amp;contactId=b83fd1a3-938c-44ef-8a27-f411735fda10&amp;widgetId=b4059e75-9755-401f-a7b5-d7c75361420d&amp;locationId=0a9259fd-e827-477b-94a7-997feb0945d6 ">
+        <em class="bmf-left-open" aria-hidden="true"></em><span>Back to Event</span></a>
+    
+    <div class="bm-course-primary-inner">
+        
+        <section class="event-info-column">
+            <h1 class="bm-course-primary-event-name bm-event-name-h1" title="Drop In Basketball - 13+" tabindex="0">Drop In Basketball - 13+</h1>
+                
+             
+            
+            <label><em class="bmf-calendar" aria-hidden="true"></em><span aria-label="Event date - May 27th, 2024 ">27-May-2024</span></label>
+            
+            
+                <label><em class="bmf-clock" aria-hidden="true"></em><span aria-label="Event time - 6 o'clock AM and 30 minutes to 8 o'clock AM">06:30 am - 08:00 am</span></label>
+                            
+            
+            
+                <label class="spots"><em class="bmf-user" aria-hidden="true"></em><span>13 spot(s) left</span></label>
+            
+        </section>
+    
+       <section class="bm-booking-info bm-restrictions">
+             
+            <div class="common-restrictions" tabindex="0">
+                    <div class="registration-info-header">Restrictions</div>
+                  
+
+                 
+                    <div class="registration-info-text">Age: 13 to 105</div>
+                 
+
+                 
+                              
+            </div>
+            
+
+        
+
+            <br>
+            <br>
+            <br>
+
+            <div class="registration-common-info" aria-label="Registration ends on May 27th, 2024 at 06:30 AM">
+                <div>Registration ends on 27-May-2024 at 06:30 AM</div>
+            </div>
+         
+        <section>
+    </section></section></div>
+</div>
+<div class="bm-course-details"></div>
+        
+
+<script src="//maps.googleapis.com/maps/api/js?key=AIzaSyDkrPPJ4JIiImcmu_bnf2Vqy3TQVkjB8Q8" type="text/javascript"></script>
+
+<script type="text/javascript">
+    function renderAdress(location, address, hasAlternativeLocation, alternativeLocation) {
+        var obj = $.extend(true, {}, { Location: location, HasAlternativeLocation: hasAlternativeLocation, AlternativeLocation: alternativeLocation }, address);
+        return kendo.Template.compile($('#booking-event-address').html())(obj);
+    }
+    function renderRestriction(label, data) {
+        return kendo.Template.compile($('#booking-event-restriction').html())({ Label: label, data: data });
+    }
+</script>
+
+<script type="kendo-template" id="booking-event-info">
+<div class="bm-course-primary-content">
+    #if (BackAction.Url != "") {#
+        <a class="bm-button bm-back-button" role="link" href=" #: BackAction.Url # ">
+        <em class="bmf-left-open" aria-hidden="true"></em><span>Back to Event</span></a>
+    # } #
+    <div class="bm-course-primary-inner">
+        
+        <section class="event-info-column">
+            <h1 class="bm-course-primary-event-name bm-event-name-h1" title="#: EventTitle #" tabindex="0">#: EventTitle #</h1>
+                # if (BookingType == 4 ) { # 
+                    <span class="bm-facility-program-name">#: ProgramName #</span> 
+                # } #
+            # if(CalendarOvernightReservations && ProgramUseCheckInOut ) { #
+                <label>
+                    <em class="bmf-calendar" aria-label="Event range,  #: StartDate # #: StartTime # until #: EndDate # #: EndTime #"></em>
+                    <span>#: StartDate # #: StartTime # until #: EndDate # #: EndTime #</span>
+                </label>
+            # } else { # 
+            # if (BookingType != 6 || IsSingleOccurrence) { #
+            <label><em class="bmf-calendar" aria-hidden="true"></em><span aria-label="Event date - #: FormattedFullStartDate ##if (StartDate != EndDate) {# until #: FormattedFullEndDate ##}# ">#: StartDate ##if (StartDate != EndDate) {# - #: EndDate ##}#</span></label>
+            # } #
+            # if(!CalendarOvernightReservations || ProgramUseCheckInOut || StartDate == EndDate) { #
+                <label><em class="bmf-clock" aria-hidden="true"></em><span aria-label="Event time - #: EventTimeWordDescription #">#: EventTimeDescription #</span></label>
+                # } #            
+            # } #
+            # if(Spots) { #
+                <label class="spots"><em class="bmf-user" aria-hidden="true"></em><span>#: Spots #</span></label>
+            # } #
+        </section>
+    
+       <section class="bm-booking-info bm-restrictions">
+            # var displayAtLeastOneRestriction = ((!DisplaySettings || DisplaySettings.DisplayGenderRestrictions) && GenderRestrictions) ||
+                                                 ((!DisplaySettings || DisplaySettings.DisplayAgeRestrictions) && AgeRestrictions) ||
+                                                 ((!DisplaySettings || DisplaySettings.DisplayRankRestrictions) && RankRestrictions) ||
+                                                 PrerequisiteEvents;  
+            if(displayAtLeastOneRestriction) { # 
+            <div class="common-restrictions" tabindex="0">
+                    <div class="registration-info-header">Restrictions</div>
+                 # if ((!DisplaySettings || DisplaySettings.DisplayGenderRestrictions) && GenderRestrictions) { # 
+                    <div class="registration-info-text">Gender: #: GenderRestrictions #</div>
+                 # } # 
+
+                 # if ((!DisplaySettings || DisplaySettings.DisplayAgeRestrictions) && AgeRestrictions) { #
+                    <div class="registration-info-text">Age: #= AgeRestrictions #</div>
+                 # } #
+
+                 # if ((!DisplaySettings || DisplaySettings.DisplayRankRestrictions) && RankRestrictions) { #
+                    <div class="registration-info-text">Rank: #: RankRestrictions #</div>
+                 # } #
+                # if (PrerequisiteEvents) { #
+                        <div id="displayPrerequisiteEvents" class="registration-info-text" role="button">Prerequisite Events: <span class="underlinePointer" aria-haspopup="dialog" role="button">
+                        #= PrerequisiteEvents # Event(s)</span></div>                                        
+                # } #              
+            </div>
+            # } #
+
+        # if (IsLotterySettingsEnabled) { # 
+    
+            <div class="registration-common-info" aria-label="#: LotteryInfo #">
+                <div >#: LotteryInfo #</div>
+            </div>
+
+        # } else if (DisplayRegistrationDatesSection) { # 
+
+            <div class="registration-restrictions">
+                <div class="registration-info-header">Registration Dates</div>
+            
+                # if (MembersRegistrationDate) { # 
+                     <div class="registration-info-text" aria-label="For members #: FormattedMembersRegistrationDate #">Members: #: MembersRegistrationDate #</div>
+                # } #
+                # if (ResidentsRegistrationDate) { #
+                     <div class="registration-info-text" aria-label="For residents #: FormattedResidentsRegistrationDate #">Residents: #: ResidentsRegistrationDate #</div>
+                # } #
+                # if (PublicRegistrationStartDate) { #
+                     <div class="registration-info-text" aria-label="For public #: FormattedPublicRegistrationStartDate #">Public: #: PublicRegistrationStartDate #</div>
+                # } #  
+    
+            <div>
+
+        # } else { #
+
+            <br/>
+            <br/>
+            <br/>
+
+            <div class="registration-common-info" aria-label="#: FormattedRegistrationInfo #">
+                <div >#: RegistrationInfo #</div>
+            </div>
+        # } # 
+        <section>
+    </div>
+</div>
+</script>
+<script type="kendo-template" id="booking-appointment-info">
+<div class="bm-course-primary-content booking-appointment">
+    <img class="landing-page-bg" src="/Content/Images/landing-page-bg.jpg" alt="Header photo" />
+    <div class="booking-appointment-details">
+        #if (BackAction.Url != "") {#
+            <a class="bm-button bm-back-button" href=" #: BackAction.Url # ">
+            <em class="bmf-left-open" aria-hidden="true"></em><span>Back to Event</span></a>
+        # } #
+
+        <div class="bm-course-primary-inner">
+            <section class="event-info-column">
+                <h1 class="bm-course-primary-event-name" title="#: ProgramName #">#: ProgramName #</h1>
+            </section>
+
+            <section class="bm-booking-info">            
+                <div class="common-restrictions">
+                    #= renderRestriction('Gender', GenderRestrictions) #
+                    #= renderRestriction('Age', AgeRestrictions) #
+                    #= renderRestriction('Rank', RankRestrictions) #
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+</script>
+
+<script id="facility-landing-page-event-template" type="text/x-kendo-template">
+        # var infoAndAvailabilty = onlineOption == onlineOptions.ShowFacilityInfoAndAvailability; 
+        var cssClasses = "k-event-template facility-booking-slot";
+        if (isPlaceholder) cssClasses += " placeholder-event";
+        if (isDisabled || infoAndAvailabilty) cssClasses += " disabled-event";
+        if (isAllDay) cssClasses += " all-day";
+        #
+        <div class="#: cssClasses #">
+            <div>
+                <span title="#: timeText #">#: title #</span>
+            </div> 
+        </div>        
+</script>
+
+<script type="kendo-template" id="booking-event-location">
+    #= renderAdress(Location, Address, HasAlternativeLocation, AlternativeLocation) #
+</script>
+<script type="kendo-template" id="booking-event-restriction">
+    # if(data){ #
+        <div>#: Label #: #: data #</div>
+    # } #
+</script>
+<script type="kendo-template" id="booking-event-logo">
+<div class="bm-org-header">
+    <img src="#: OrgLogo #" alt="PerfectMind Logo" aria-hidden="true"/>
+    <div class="bm-org-name">   
+        # if(!OrgIsSingleLocation){ #           
+            <h4># if(BookingType == 4){ # #: OrgName # # } else { # #: Location # #}#</h4>
+        # } else { #
+            <h4>#: OrgLegalName #</h4>            
+        # } #
+    </div>
+    <div id="google_translate_element" style="position:absolute; right: 400px;"></div>
+</div>
+</script>
+<script type="kendo-template" id="booking-event-logo-address">
+    # if(!!Address) { #
+        <div id="bm-org-address" >
+            # if(Address.Street != ""){ #
+                    <span>#: Address.Street #,</span>
+            # } #
+                # if(Address.City != ""){ #
+                    <span>#: Address.City #,</span>
+            # } #
+            # if(Address.Country != ""){ #
+                    <span>#: Address.Country #,</span>
+            # } #
+            # if(Address.PostalCode != ""){ #
+                    <span>#: Address.PostalCode #</span>
+            # } #
+        </div>
+    # } #
+</script>
+
+<script type="kendo-template" id="booking-event-address">
+    # var addressDescription = HasAlternativeLocation ? AlternativeLocation : (AddressTag != null ? AddressTag : Location);
+        if(!HasAlternativeLocation){
+            if (!!Street) addressDescription += ", street " + Street;
+            if (!!City) addressDescription += ", city " + City;
+            if (!!Country) addressDescription += ", country " + Country;
+            if (!!PostalCode) addressDescription += ", postalCode " + PostalCode;
+        }        
+    #
+    <div class="column first-column" style='width: 75%;' aria-label="Event location">#= HasAlternativeLocation ? "Event location: " + AlternativeLocation : (AddressTag != null ? AddressTag : Location) #</div>
+    <div class="column second-column" style='vertical-align:top;'>
+        <span id="show-location-popover" class="bm-popover-link" tabindex="0" aria-label="Show event location on map" role="button" aria-haspopup="dialog">Show Map</span>
+        <div id="location-popover-container" class="bm-popover-container" role="dialog" tabindex="0">
+            <em class="bmf-cross" aria-hidden="true" role="button"></em>
+            <div id="map-canvas" class="bm-map-canvas"></div>
+            <div class="bm-map-address">#= HasAlternativeLocation ? AlternativeLocation : (AddressTag != null ? AddressTag : Location) #</div>
+            # if(!HasAlternativeLocation){ #
+                <div>#: Street #</div>
+                <div>#: City #, #: Country #, #: PostalCode #</div>
+            # } #
+
+            <div class="bm-map-address">Get Direction From:</div>
+            <div class="bm-location-popover-dest">
+                <label for="directionDestination" class="hidden-label">Enter the direction from</label>
+                <input id="directionDestination" name="directionDestination" class="pm-text-input" role="texbox"></input>
+                <span id="calculateDirectionButton" class="bm-button" aria-label="Calculate direction" role="button" tabindex="0">Calculate</span>
+            </div>
+        </div>
+    </div>
+
+</script>
+<script type="text/template" id="facility-list-filterblock-template">
+    <a class="clear-filter-block" href="javascript:;" data-bind="click: resetCallback, visible: resetVisible, attr: { 'aria-label': 'Clear selected ' + filterBlockName + ' filter' }, event: { keydown: resetCallbackOnKeyPress }" role="button">Clear</a>
+    <ul class="padding-bottom" data-bind="foreach: itemsToShow">
+        <li data-bind="visible: isVisible">
+            <input class="pm-checkbox-blue" type="checkbox" role="checkbox"
+                data-bind="attr: { 'data-value': ID, 'id': $parent.filterBlockName + $index(), 'data-text': Name, value: ID, name: $parent.inputName },
+                event: { change: $parent.filterChangeCallback }"/>
+            <label data-bind="attr: { 'for': $parent.filterBlockName + $index() }, text: Name"></label>
+        </li>
+    </ul>
+    <a href="javascript:;" class="show-more-toggle" data-bind="click: onShowMoreClick, text: showMoreText, visible: showMoreVisible, attr: { 'aria-expanded': showAll() ? 'true' : 'false' }, event: { keydown: onShowMoreKeyPress }" role="button"></a>
+</script>
+<script type="text/x-kendo-template" id="facilityTemplate">
+    #
+    var linkText = (OnlineOption == bookMeConstants.OnlineOption.ShowFacilityInfo.Id) ? 'Information' : 'Choose';
+    #
+	<div class="facility-item" data-facilityId="#: ID #" tabindex="0">
+        <div class="desktop-details-wrapper">
+            #if (showAvailabilityIndicator){ #
+                <div class="desktop-details-availability">                
+                    <span class="img #:bookMeConstants.FacilityAvailability.Items[Availability].CssClass#">#:bookMeConstants.FacilityAvailability.Items[Availability].Description#</span>
+                </div>
+            # } #
+            #if (IsFacilityMap) { #
+                <a onclick="onChooseClick(this, #: IsFacilityMap #); return false;" data-facilityId="#: ID #" 
+                    class="pm-confirm-button desktop-details" role="link" aria-label="Choose \\#: Name \\# facility map" tabindex="0" href="javascript:void(0);">Choose</a>            
+            # } else { #
+                <a onclick='onChooseClick(this, #: IsFacilityMap #); return false;' data-facilityId="#: ID #" 
+                    class="pm-confirm-button desktop-details" role="link" aria-label="\\#: linkText + &\\#39; &\\#39; + Name \\# facility" tabindex="0" href="#: onClickActionGoToLandingPage(ID) #">#: linkText #</a>            
+                #if(OnlineOption == bookMeConstants.OnlineOption.AllowReservationWithApproval.Id) { #
+                    <span class="desktop-details-hint">Requires Approval</span>
+                # } #
+            # } #
+        </div>
+        #if(!Image) { 
+            Image = "/Content/Images/ControlIcons/noimage.png";
+        } #
+        <img class="facility-image" src="#: Image #" alt="#: Name # facility photo"/>
+		<div class="facility-details">				
+			<h2>#: Name # #if (IsFacilityMap) { # (#: MapFacilitiesCount # Facilities) # } #</h2>
+            # if(FacilityType && !IsFacilityMap){ #
+			    <span class="facility-type facility-tag">#: FacilityType #</span>
+            # } #			
+			<div id="facilityDescriptionUniqueId-#: uid #" class="facility-description truncated">#: Description #</div>
+            <a href="javascript:void(0);" class="read-more-toggle" aria-controls="facilityDescriptionUniqueId-#: uid #" aria-expanded="false" role="button">Read more</a>
+    
+            <span class="facility-location" data-bind="visible: !isSingleLocationOrganization()"><span style="font-weight: 600;">Location: </span>#: LocationName #</span>
+            # if (Amenities.length > 0) { #
+                <span class="facility-amenities"><span style="font-weight: 600;">Amenities: </span>#: joinedAmenities #</span>
+            # } #	
+        </div>
+	<div class="tablet-details-wrapper">
+            #if (showAvailabilityIndicator){ #
+                <div class="tablet-details-availability">                
+                    <span class="img #:bookMeConstants.FacilityAvailability.Items[Availability].CssClass#">#:bookMeConstants.FacilityAvailability.Items[Availability].Description#</span>                
+                </div>
+            # } #
+            #if (IsFacilityMap) { #
+                <a onclick="onChooseClick(this, #: IsFacilityMap #); return false;" data-facilityId="#: ID #"
+                    class="pm-confirm-button tablet-details" href="javascript:void(0);" tabindex="0">Choose</a>            
+            # } else { #
+                <a onclick='onChooseClick(this, #: IsFacilityMap #); return false;' data-facilityId="#: ID #" 
+                    class="pm-confirm-button tablet-details" href="#: onClickActionGoToLandingPage(ID) #" tabindex="0">#: linkText #</a>            
+                #if(OnlineOption == bookMeConstants.OnlineOption.AllowReservationWithApproval.Id) { #
+                    <span class="tablet-details-hint">Requires Approval</span>
+                # } #
+            # } #
+        </div>
+	</div>
+</script>
+<script type="text/x-kendo-template" id="successfulAlertTemplate">        
+    <div class="popup-first-user-login-alert-message"> 
+        <i class="fa fa-times fa-lg" aria-hidden="true"></i>                   
+        <p>#: message #</p>
+    </div>            
+</script>
+<script type="text/x-kendo-template" id="notificationTemplate">        
+    <div class="notification-message" role="dialog">
+            #: message #
+    </div>            
+</script>
+<script type="text/x-kendo-template" id="facilityMapPinToolTipTemplate">        
+    <div class="facility-texts-block">
+        <div class="facility-head">
+            <img class="facility-image" src="#: Image #" alt="#: Name # facility photo" aria-hidden="true"/>
+            <div class="name-wrapper">
+                <div class="facility-name ellipsis">#: Name #</div>
+                # if (!!FacilityType) { #
+                    <div class="facility-type ellipsis">#: FacilityType #</div>
+                # } #
+                # if (!!Address) { #
+                    <div>#: Address.Street + ',' + Address.City + ',' + Address.PostalCode #</div>
+                # } #
+            </div>
+        </div>
+        # if (!!Description) { #
+            <div class="description-info">
+                <div class="facility-description truncated">#: Description #</div>
+                <a href="javascript:;" class="read-more-toggle" aria-expanded="false" role="button">Read more</a>
+            </div>
+        # } #
+        # if (Amenities.length > 0) { #
+            <span class="facility-amenities">Amenities: <span style="font-weight: 600;">#: joinedAmenities #</span></span>
+        # } #
+        # for (var i in OptionalDetails) { #
+            <div style="display: block" class="detail-wrapper">#: i #: <span style="font-weight: 600;">#: OptionalDetails[i] #</div></span>
+        # } #
+        # if (!!CheckInTime) { #
+            <div style="display: block" class="detail-wrapper">Check in:  <span style="font-weight: 600;">#: CheckInTime #</div></span>
+        # } #
+        # if (!!CheckOutTime) { #    
+            <div style="display: block" class="detail-wrapper">Check out:  <span style="font-weight: 600;">#: CheckOutTime #</div></span>
+        # } #
+        # if (!!PriceDetails) { # 
+            <div style="display: block" class="detail-wrapper">#: PriceDetails #</div>
+        # } #
+        <div>
+            #if (showAvailabilityIndicator){ #
+                <div class="availability">                
+                    <span class="img #:bookMeConstants.FacilityAvailability.Items[Availability].CssClass#">#:bookMeConstants.FacilityAvailability.Items[Availability].Description#</span>                
+                </div>
+            # } #
+            <a class="pm-confirm-button" onclick='onChooseClick(this); return false;' data-facilityId="#: FacilityId #"
+                href="#: onClickActionGoToLandingPage(FacilityId) #" role="link" tabindex="0">Choose</a>
+        </div>
+    </div>              
+</script>
+<script id="notQualifiedMemberNotificationTemplate" type="text/x-kendo-template">
+    <div class="not-qualified-member-notification notification-element" role="alert">
+        <span class="exclamation-mark-icon"></span>
+        <div class="text">
+            <h3>#: title #</h3>
+            <p>#: message #</p>
+        </div>
+    </div>
+</script>
+<script id="selectAttendeeNotificationTemplate" type="text/x-kendo-template">
+    <div class="select-attendee-notification notification-element" role="alert">
+        <span class="exclamation-mark-icon"></span>
+        <h3>#: message #</h3>
+    </div>
+</script>
+
+
+
+<link rel="stylesheet" href="/Content/compass/css/BookMe/BookMe4-Breadcrumbs.css?05091054" type="text/css">
+
+<div id="breadcrumbs-container" class="bm-breadcrumbs-wrapper">    
+    <ol class="step-indicator" data-bind="foreach: stepItems">        
+        <li data-bind="attr: { class: CssStyle }" class="complete">
+            <div class="step" data-bind="text: Number, click: $root.onStepItemClickOrKeyDown, keydown: $root.onStepItemClickOrKeyDown">1</div>
+            <a class="caption" data-bind="text: Caption, attr: { href: Url, 'aria-hidden': !$root.canNavigateToStep($data), 'aria-label': 'Navigate to ' + Caption + ' step', tabindex: !$root.canNavigateToStep($data) ? -1 : null  }" href="/23615/Menu/BookMe4EventParticipants?eventId=c914f521-f459-c203-28c3-8536cab22143&amp;occurrenceDate=20240527&amp;contactId=b83fd1a3-938c-44ef-8a27-f411735fda10&amp;widgetId=b4059e75-9755-401f-a7b5-d7c75361420d&amp;locationId=0a9259fd-e827-477b-94a7-997feb0945d6" aria-label="Navigate to Attendees step">Attendees</a>
+        </li>        
+            
+        <li data-bind="attr: { class: CssStyle }" class="active">
+            <div class="step" data-bind="text: Number, click: $root.onStepItemClickOrKeyDown, keydown: $root.onStepItemClickOrKeyDown">2</div>
+            <a class="caption" data-bind="text: Caption, attr: { href: Url, 'aria-hidden': !$root.canNavigateToStep($data), 'aria-label': 'Navigate to ' + Caption + ' step', tabindex: !$root.canNavigateToStep($data) ? -1 : null  }" href="#" aria-hidden="true" aria-label="Navigate to Fees &amp; Extras step" tabindex="-1">Fees &amp; Extras</a>
+        </li>        
+            
+        <li data-bind="attr: { class: CssStyle }" class="disabled">
+            <div class="step" data-bind="text: Number, click: $root.onStepItemClickOrKeyDown, keydown: $root.onStepItemClickOrKeyDown">3</div>
+            <a class="caption" data-bind="text: Caption, attr: { href: Url, 'aria-hidden': !$root.canNavigateToStep($data), 'aria-label': 'Navigate to ' + Caption + ' step', tabindex: !$root.canNavigateToStep($data) ? -1 : null  }" href="#" aria-hidden="true" aria-label="Navigate to Payment step" tabindex="-1">Payment</a>
+        </li>        
+    </ol>    
+</div>
+
+<script>
+    
+    require(["BreadcrumbsController"], function (breadcrumbsController) {
+        breadcrumbsController.init({
+            stepItems: [{"Number":1,"Caption":"Attendees","StepState":0,"CssStyle":"complete","Url":"/23615/Menu/BookMe4EventParticipants?eventId=c914f521-f459-c203-28c3-8536cab22143\u0026occurrenceDate=20240527\u0026contactId=b83fd1a3-938c-44ef-8a27-f411735fda10\u0026widgetId=b4059e75-9755-401f-a7b5-d7c75361420d\u0026locationId=0a9259fd-e827-477b-94a7-997feb0945d6"},{"Number":2,"Caption":"Fees \u0026 Extras","StepState":1,"CssStyle":"active","Url":"#"},{"Number":3,"Caption":"Payment","StepState":2,"CssStyle":"disabled","Url":"#"}],
+            isHoldTrackerVisible : 'false',
+            containerSelector: '#breadcrumbs-container'
+        });
+    });
+</script>
+        <form id="nextPageForm" action="/23615/Menu/BookMe4Cart/Cart?memberId=b83fd1a3-938c-44ef-8a27-f411735fda10&amp;waitListMode=False" method="post" style="display: none;">
+            <input name="__RequestVerificationToken" type="hidden" value="sy-vJR8MS2IFtQRAMFCQE6yXzWxd05tZn0PX3d0jKndic2m7C9zNAk-E2fBXBkI5IXHRsWgBUnylxAaKHyOKwBHtVhEH8zRjhe80irO1PGIosCuaoCVjV3Cc50ZT4jidO_KvTvDOFEy4Qi2gI1hV2GmnT_I1">
+            <input id="EventId" name="EventId" type="hidden" value="c914f521-f459-c203-28c3-8536cab22143">
+<input id="ObjectId" name="ObjectId" type="hidden" value="6a293c5d-5ea0-d5b9-2ae2-f91bc2069f1b">
+<input id="WidgetId" name="WidgetId" type="hidden" value="b4059e75-9755-401f-a7b5-d7c75361420d">
+<input id="OccurrenceDate" name="OccurrenceDate" type="hidden" value="20240527">
+<input id="LandingPageBackLink" name="LandingPageBackLink" type="hidden" value="">
+<input id="FakeEventId" name="FakeEventId" type="hidden" value="">
+<input id="ParentId" name="ParentId" type="hidden" value="5b648730-f24e-46cc-a243-1660ca04e686">
+<input id="AmendmentMode" name="AmendmentMode" type="hidden" value="False">
+<input id="SelectedPaymentPlanId" name="SelectedPaymentPlanId" type="hidden" value="">
+
+
+<div class="bm-cart-item-member" style="display: none;">
+<input class="bm-cart-item-member-id" id="CartItemMembers_0__MemberId" name="CartItemMembers[0].MemberId" type="hidden" value="b83fd1a3-938c-44ef-8a27-f411735fda10">
+<input id="CartItemMembers_0__AccountId" name="CartItemMembers[0].AccountId" type="hidden" value="f98be704-d45f-430f-ad9f-349e73a270e6">
+<input id="CartItemMembers_0__FullNameSimple" name="CartItemMembers[0].FullNameSimple" type="hidden" value="Micah Hou">
+<input id="CartItemMembers_0__Photo" name="CartItemMembers[0].Photo" type="hidden" value="">
+<input class="bm-cart-item-price-id" id="CartItemMembers_0__Price_Id" name="CartItemMembers[0].Price.Id" type="hidden" value="0ae91c24-871a-42fd-90ff-c0f14f51f2ee">
+<input class="bm-cart-item-price-was-prorated" id="CartItemMembers_0__Price_WasProrated" name="CartItemMembers[0].Price.WasProrated" type="hidden" value="false">
+<input class="bm-cart-item-price-prorated-amount" id="CartItemMembers_0__Price_ProratedAmount" name="CartItemMembers[0].Price.ProratedAmount" type="hidden" value="3.75">
+<input class="bm-cart-item-price-adjusted-time" id="CartItemMembers_0__Price_AdjustedStartDate" name="CartItemMembers[0].Price.AdjustedStartDate" type="hidden" value="">
+<input class="bm-cart-item-price-makeup-class" id="CartItemMembers_0__Price_MakeUpClass" name="CartItemMembers[0].Price.MakeUpClass" type="hidden" value="false">
+<input id="CartItemMembers_0__AttendanceStatus" name="CartItemMembers[0].AttendanceStatus" type="hidden" value="">
+<input id="CartItemMembers_0__RegistrationStart" name="CartItemMembers[0].RegistrationStart" type="hidden" value="">
+
+
+</div>
+        </form>
+        
+        
+
+        <div class="bm-extras-participants">
+            <h3 tabindex="0">Select Optional Event Extras (Required extras cannot be removed)</h3>
+            
+
+
+<div id="b83fd1a3-938c-44ef-8a27-f411735fda10" class="bm-extras-participant">
+    
+    <h4>
+        <span class="bm-primary-image" style="background-image: url('/Content/Images/DefaultIcons/profile-icon.svg?05091054')"></span>
+        <span class="bm-extras-participant-fullname" tabindex="0">Micah Hou</span>
+    </h4>
+    <div class="bm-extras-costs">
+        <ul>
+            
+            <li>
+                <div class="fee-section">
+                    <div class="section-label">
+                         <h4>Select a FEE to pay</h4>                         
+                    </div>
+               
+                <label class="prorated-fee-message" style="display: none">(Late registration will receive prorated fees)</label>
+                <table class="bm-extras-prices radio-group">
+                    
+                        <tbody><tr class="radio-item ">
+                            <td class="fee-name field-text-value">
+                                <input type="radio" role="radio" checked="checked" name="b83fd1a3-938c-44ef-8a27-f411735fda10_price" id="b83fd1a3-938c-44ef-8a27-f411735fda10_0ae91c24-871a-42fd-90ff-c0f14f51f2ee" class="holiday-radio-btn" onchange="onPriceChange(); removeParticipantNameFromAriaLabel(this);" data-is-makeup="False">
+                                <label for="b83fd1a3-938c-44ef-8a27-f411735fda10_0ae91c24-871a-42fd-90ff-c0f14f51f2ee">
+                                     <span class="outer-circle">
+                                            <span class="inner-circle"></span>
+                                     </span>
+                                     <span class="fee-name-item" aria-label="Micah Hou, Select a fee to pay. 2023-2025 - CRS - Drop In Sport - Youth - $3.75 - Tax Included." data-aria-label-selected="Select a fee to pay. 2023-2025 - CRS - Drop In Sport - Youth - $3.75 - Tax Included." data-aria-label-first="Micah Hou, Select a fee to pay. 2023-2025 - CRS - Drop In Sport - Youth - $3.75 - Tax Included."> 2023-2025 - CRS - Drop In Sport - Youth </span>                                     
+                                </label>
+                                
+                            </td>
+                            <td class="prices-value">
+                                
+                                <div class="fee-item-value">
+                                    <div class="bm-price-tag">$3.75</div>
+                                    <input type="hidden" value="3.75" class="bm-extras-price-amount">
+                                </div>
+                                    <div class="bm-taxable-state-tag">Tax Included</div>
+                            </td>
+                        </tr>
+                    
+                </tbody></table>
+              </div>
+            </li>
+            
+            <li class="bm-participant-subtotal" tabindex="0" aria-label="The total for Micah Hou 3.75$">
+                <span class="pay-label">Total</span>
+                <span class="bm-extras-member-subtotal">$3.75</span>
+            </li>
+        </ul>
+    </div>
+
+
+</div>
+<div id="prorateCoursePopup" style="display: none;" role="dialog">
+
+    <div class="prorate-course-description">
+        The selected course you are registering to has started on 
+        <strong data-bind="text: kendo.toString(firstOccurrence.StartDate, 'MMM dd, yyyy')"></strong>
+        <br>Please choose the amount you would like to prorate this customer for...
+    </div>
+
+    <div class="properties-section">
+        <div class="section-name">
+            1. Properties
+        </div>
+
+        <div class="reg-startdate-block">
+            <div class="first-column">
+                <input type="radio" name="propertiesSectionRadioButton" id="regStartDateRadioButton" value="datePicker" data-bind="checked: inputSelected">
+                <label class="reg-startdate-label" for="regStartDateRadioButton">Registration start date</label>
+            </div>
+            <div class="second-column">
+                <label style="display: none;" for="regStartDatePickerInput">Registration start date</label>
+                <input id="regStartDatePickerInput" data-bind="kendoDatePicker: { 
+                       value: startDate,
+                       enabled: datePickerEnabled,
+                       min: minStartDate,
+                       max: maxStartDate
+                }" class="reg-startdate-datepicker-input" name="reg-startdate-datepicker-input">
+            </div>
+        </div>
+
+        <div class="reg-sessions-number-block">
+            <div class="first-column">
+                <input type="radio" name="propertiesSectionRadioButton" id="regSessionsNumberRadioButton" value="numericTextBox" data-bind="checked: inputSelected">
+                <label class="reg-sessions-number-label" for="regSessionsNumberRadioButton">Register for last # of sessions</label>
+            </div>
+            <div class="second-column">
+                <div data-bind="visible: numericInputEnabled">
+                    <label for="kendo-last-sessions-number" style="display: none;">Last Sessions Number</label>
+                    <input id="lastSessionsNumber" data-bind="kendoNumericTextBox: {
+                       id: lastSessionsNumber,
+                       value: lastSessionsNumber,
+                       min: minLastSessionsNumber,
+                       max: maxLastSessionsNumber,
+                       format: 'n0',
+                       decimals: 0,
+                       change: function() {
+                           if (!this.value()) {
+                               this.value(1);
+                           }
+                       }
+                    }">
+                </div>
+                <label class="last-sessions-number-label" for="lastSessionsNumber" data-bind="text: lastSessionsNumber, for: lastSessionsNumber, visible: !numericInputEnabled()"></label>
+            </div>
+        </div>
+    </div>
+
+    <div class="prorate-amount-section">
+        <div class="section-name">
+            2. Prorated Amount
+        </div>
+        <div class="section-amount">
+            <label for="kendo-prorated-amount-input" style="display: none;">Amount</label>
+            <label for="prorated-amount-input" style="display: none;">Amount</label>
+            <input type="text" class="prorated-amount-input" id="prorated-amount-input" name="prorated-amount-inp" data-bind="kendoNumericTextBox: { value: proratedAmount, enabled: false, format: 'c', spinners: false }">
+        </div>
+    </div>
+    <div class="button-section">
+        <a title="Done" class="pm-confirm-button" data-bind="click: onDoneClick"><span>Done</span></a>
+    </div>
+
+</div>
+<script>
+    function ProratePopupViewModel(ko, eventInfo) {
+        var me = this;
+
+        var registrationEndDate = kendo.timezone.convert(kendo.parseDate(eventInfo.RegistrationEndDateUtc, "s"), 0, new Date().getTimezoneOffset());
+        registrationEndDate.setHours(0, 0, 0, 0);
+
+        me.eventInfo = eventInfo;
+
+        me.ProrateSessionsBasedOnDuration = eventInfo.AdminProrateInfo.ProrateSessionsBasedOnDurationEnabled &&
+            eventInfo.ProrateSessionsBasedOnDuration;
+
+        var occurrences = initOccurrencesWithDates(eventInfo.Occurrences);
+
+        me.memberId = ko.observable(null);
+        var prorateKendoWindow = null;
+
+        me.numberOfOccurrences = occurrences.length;
+
+        me.firstOccurrence = occurrences.filter(function (o) {
+            return o.OccurrenceOrderNumber === 0;
+        })[0];
+
+        me.firstAllowedOccurrence = occurrences.filter(function (o) {
+            return o.OccurrenceOrderNumber === eventInfo.AdminProrateInfo.ProrateAfterSessionsNumber - 1;
+        })[0];
+
+        me.lastOccurrence = occurrences.filter(function (o) {
+            return o.OccurrenceOrderNumber === me.numberOfOccurrences - 1;
+        })[0];
+
+        var occurrenceAfterRegEndDate = findFirstOccurrenceAfterDate(occurrences, registrationEndDate);
+        // Registration start date will default to today.
+        me.startDate = ko.observable(new Date());
+        // Date must be greater than or equal to the date implied by the Allow Prorate settings.
+        me.minStartDate = ko.observable(me.firstAllowedOccurrence.StartDate);
+        // Date must be less than or equal to the registration end date OR course end date whichever is earlier.
+        me.maxStartDate = ko.observable(minDate(occurrenceAfterRegEndDate.StartDate, me.lastOccurrence.StartDate));
+
+        me.lastSessionsNumber = ko.observable();
+        // Number of sessions cannot be less than the number between the registration end date and course end date.
+        // Value must be greater than or equal to 1
+        var minLastSessionsNumber = me.numberOfOccurrences - occurrenceAfterRegEndDate.OccurrenceOrderNumber - 1;
+        me.minLastSessionsNumber = ko.observable(minLastSessionsNumber > 0 ? minLastSessionsNumber : 1);
+        // Number of sessions cannot be greater than number of sessions between date implied by the Allow Prorate settings and end course date.
+        me.maxLastSessionsNumber = ko.observable(me.numberOfOccurrences - me.firstAllowedOccurrence.OccurrenceOrderNumber);
+
+        me.inputSelected = ko.observable('datePicker');
+        me.numericInputEnabled = ko.computed(function() {
+            return me.inputSelected() === 'numericTextBox';
+        });
+        me.datePickerEnabled = ko.computed(function () {
+            return me.inputSelected() === 'datePicker';
+        });
+
+        me.getTotalDuration = function () {
+            return getTotalDuration(me.eventInfo);
+        };
+
+        me.getProratedDuration = function (firstOccurenceNumber) {
+            return getProratedDuration(me.eventInfo, firstOccurenceNumber);
+        };
+
+        me.proratedAmount = ko.computed(function () {
+            var total = selectedPriceAmountForMember(me.memberId());
+
+            var resultAmount = 0;
+
+            if (me.ProrateSessionsBasedOnDuration) {
+                var totalDuration = me.getTotalDuration();
+                var proratedDuration = me.getProratedDuration(me.numberOfOccurrences - me.lastSessionsNumber());
+                resultAmount = (total / totalDuration) * proratedDuration;
+            } else {
+                resultAmount = total * me.lastSessionsNumber() / me.numberOfOccurrences;
+            }
+
+            return Number(resultAmount);
+        });
+
+        function findFirstOccurrenceAfterDate(occurrences, date) {
+            var sessionsAfterDate = Enumerable.From(occurrences)
+                .Where(function (o) { return o.StartDate >= date });
+
+            if (!sessionsAfterDate.Any()) {
+                return me.lastOccurrence;
+            }
+
+            var orderNumber = sessionsAfterDate
+                .Min(function (o) { return o.OccurrenceOrderNumber });
+
+            return Enumerable.From(occurrences).First(function(o) { return o.OccurrenceOrderNumber === orderNumber });
+        };
+
+        // Replaces serialized string date values with Date objects.
+        function initOccurrencesWithDates(occurrences) {
+            return Enumerable.From(occurrences)
+                .Select(function (o) {
+                    var startDate = new Date(o.StartDate);
+                    return {
+                        OccurrenceOrderNumber: o.OccurrenceOrderNumber,
+                        StartDate: new Date(startDate.getTime() + getTimeZoneOffsetWithDstCorrection(startDate) * 60000)
+                    };
+                }).ToArray();
+        };
+
+        function minDate(date1, date2) {
+            if (date1 > date2) {
+                return date1;
+            }
+
+            return date2;
+        };
+
+        var updateNumberOfSessionsValue = true;
+
+        function updateDatePickerValue(newSessionNumber) {
+            if (!!newSessionNumber) {
+                var occurrence = occurrences.filter(function (o) {
+                    return o.OccurrenceOrderNumber === me.numberOfOccurrences - newSessionNumber;
+                })[0];
+                updateNumberOfSessionsValue = false;
+                me.startDate(occurrence.StartDate);
+                updateNumberOfSessionsValue = true;
+            }
+        };
+
+        function updateNumberOfSessionValue(newDate) {
+            if (!!newDate && updateNumberOfSessionsValue) {
+                newDate = new Date(newDate.getTime());
+                newDate.setHours(0, 0, 0, 0);
+                newDate = new Date(newDate.getTime() + getTimeZoneOffsetWithDstCorrection(newDate) * 60000);
+
+                var occurrence = findFirstOccurrenceAfterDate(occurrences, newDate);
+                me.lastSessionsNumber(me.numberOfOccurrences - occurrence.OccurrenceOrderNumber);
+            }
+        };
+
+        function getTimeZoneOffsetWithDstCorrection(date) {
+            var offset = date.getTimezoneOffset();
+            var newDate = new Date(date.getTime() + offset * 60000);
+            return newDate.getTimezoneOffset();
+        }
+
+        me.showPopup = function (memberId) {
+            me.memberId(memberId);
+            var prorateWindowElem = $("#prorateCoursePopup");
+            prorateKendoWindow = prorateWindowElem.data("kendoWindow");
+            if (prorateKendoWindow == null) {
+                prorateKendoWindow = prorateWindowElem.pmKendoDialog({
+                    width: "528px",
+                    height: "404px",
+                    modal: true,
+                    title: "Prorate Course",
+                    resizable: false,
+                    visible: false,
+                    draggable: false,
+                    destroyOnClose: false,
+                    open: function() {
+                        $("html, body").scrollTop(0).css("overflow", "hidden");
+                        this.center();
+                    },
+                    close: function () { $("html, body").css("overflow", ""); }
+                }).data("kendoWindow");
+            }
+            prorateKendoWindow.element.parent().addClass("prorate-course-popup");
+            prorateKendoWindow.open().center();
+        };
+
+        me.onDoneClick = function() {
+            applyProrate(me.memberId(), me.eventInfo, me.numberOfOccurrences - me.lastSessionsNumber());
+            prorateKendoWindow.close();
+            $("input[value='" + me.memberId() + "']").parent().find('.bm-cart-item-price-adjusted-time').val(kendo.toString(me.startDate(), 'yyyyMMdd'));
+        };
+        
+        updateNumberOfSessionValue(new Date());
+        me.startDate.subscribe(updateNumberOfSessionValue);
+        me.lastSessionsNumber.subscribe(updateDatePickerValue);
+        me.lastSessionsNumber.extend({ notify: 'always' });
+    };
+
+    function selectedPriceAmountForMember(memberId) {
+        var sum = 0;
+        var selectedPrice = $('#' + memberId).find('.bm-extras-costs .bm-extras-prices').find('input[type="radio"]:checked, input[type="checkbox"]:checked');
+        if (selectedPrice.length > 0) {
+            $(selectedPrice).closest('tr').find('.bm-extras-price-amount').each(function () {
+                sum += Number($(this).val());
+            });
+        }
+
+        return sum;
+    };
+</script>
+        </div>
+        
+        <div class="bm-form-navbar">
+             
+            <a title="Add to Cart" data-disable-on-load="" onclick="showRegistrationFormAndAddToCart()" class="bm-button" role="link" href="#">
+                <span>Next</span>
+            </a>
+        </div>        
+    </div>
+    
+    <script type="text/javascript">
+        var constants = null;
+        $(window).on("load", function () {
+            require(["PlannerConstants"], function (plannerConstants) {
+                constants = plannerConstants.getConstants();
+
+                
+                       calculatePayNowPayLater();
+                
+                updateSubtotals();
+                updatePricePerExtraDescription();
+            });
+        });
+
+        function showHideCautionLabels(withExtras) {
+            if (withExtras) {
+                $('.bm-caution-text.no-extras-label').hide();
+                $('.bm-caution-text.with-extras-label').show();
+            } else {
+                $('.bm-caution-text.no-extras-label').show();
+                $('.bm-caution-text.with-extras-label').hide();
+            }
+        }
+
+        var POS2Enabled = true;
+        var isAdmin = false;
+        var adminHeaderValues = null;
+        var eventInfo = $.extend(true, {}, {
+            BackAction: {
+                Url: "/23615/Menu/BookMe4EventParticipants?eventId=c914f521-f459-c203-28c3-8536cab22143&occurrenceDate=20240527&contactId=b83fd1a3-938c-44ef-8a27-f411735fda10&widgetId=b4059e75-9755-401f-a7b5-d7c75361420d&locationId=0a9259fd-e827-477b-94a7-997feb0945d6",
+                Name: "Back"
+            }
+        }, {"ParentEventId":"5b648730-f24e-46cc-a243-1660ca04e686","LotterySettings":null,"IsLotterySettingsEnabled":false,"IsLotteryRegistrationEnabled":false,"IsAdminSession":false,"FakeEventId":null,"LotteryInfo":"","RecordName":"753208","CalendarId":"be083bfc-aeee-4c7a-aa26-07eb679e18a6","CalendarOvernightReservations":false,"ServiceDurationId":null,"WidgetId":"b4059e75-9755-401f-a7b5-d7c75361420d","RegFormId":null,"ImageUrl":"","ProgramId":"79a51a92-87dd-43f1-abd4-7ee62f005d11","ProgramDescription":"Get active with a game of basketball. Join up with other players for a friendly game. Full court game play with team rotations. All skill levels and abilities welcome.","ProgramName":"Drop In Basketball - 13+","ProgramImageUrl":"//az12497.vo.msecnd.net/146ba8bcf9424f4aa87791ff14172e96/images/218/87d3a06eb71e4a10a1a7cd4da092a40c.png","ProgramUseCheckInOut":false,"EventTimeWordDescription":"6 o\u0027clock AM and 30 minutes to 8 o\u0027clock AM","SessionName":"","StartDate":"27-May-2024","StartDateWithOffset":"2024-05-27T06:30:00-07:00","PublicRegistrationStartDate":null,"FormattedPublicRegistrationStartDate":null,"PublicRegistrationStartDateValue":"2024-05-24T06:30:00","PublicRegistrationStartDateWithOffset":null,"ResidentsRegistrationDate":"","FormattedResidentsRegistrationDate":null,"ResidentsRegistrationDateWithOffset":null,"ResidentsRegistrationDateValue":"2024-05-24T06:30:00","MembersRegistrationDate":"","FormattedMembersRegistrationDate":null,"MembersRegistrationDateWithOffset":null,"MembersRegistrationDateValue":"2024-05-24T06:30:00","FormattedFullStartDate":"May 27th, 2024","StartTime":"06:30 AM","StartDay":"Monday","EndDate":"27-May-2024","EndDateWithOffset":"2024-05-27T08:00:00-07:00","FormattedFullEndDate":"May 27th, 2024","EndTime":"08:00 AM","AppointmentStartDateTimeTicks":0,"ActualLocation":"Newton Recreation Centre - Wave Pool","Latitude":null,"Longitude":null,"LocationId":"0a9259fd-e827-477b-94a7-997feb0945d6","AgeRule":1,"AgeRuleSpecificDate":"2017-10-19T00:00:00","Restrictions":"Gender - Co-ed; Age - 13 to 105; Rank -  Prerequisite Events - 0","DisplayableRestrictions":"13 to 105","SpotsLeft":14,"RegistrationInfo":"Registration ends on 27-May-2024 at 06:30 AM","FormattedRegistrationInfo":"Registration ends on May 27th, 2024 at 06:30 AM","IsRegistrationClosed":false,"IsFutureRegistration":false,"AnyRegistrationDateInFuture":false,"RegistrationEndDateInEventTimeZone":"2024-05-27T06:30:00","RegistrationEndDateUtc":"2024-05-27T13:30:00Z","FormattedRegistrationEndDate":"27-May-2024 at 06:30 AM","IsWaitListAvailable":false,"IsWaitListFull":false,"IsWaitListHasSpots":false,"RestrictWaitlist":false,"IsFull":false,"Token":null,"Color":10326732,"FacilityId":"ef62f5b9-be03-425e-8369-e4e1484bb1df","FacilityContractId":null,"FacilityOnlineOption":0,"FacilitySupervisorEmails":"","Assistants":[],"MaximumCapacity":15,"WaitListCapacity":15,"WaitListSpotsLeft":15,"CanNotBook":false,"Prices":[{"Id":"c5f3f8c4-293a-446e-8b56-714bc5c97533","ObjectId":"6a293c5d-5ea0-d5b9-2ae2-f91bc2069f1b","ItemId":"c914f521-f459-c203-28c3-8536cab22143","Amount":2.00,"PriceTypeId":"bee2cd00-f8a7-444f-bc03-0b4252492c34","Name":"2023/2024 - CRS - Drop In Sport - 70+","IsSelected":true,"IsOriginalPrice":false,"CanSelect":false,"ShowOnline":null,"DisplayAmount":"$2.00","DisplayProratedAmount":"No fee","DisplayAmountOrAsFree":"$2.00","WasProrated":false,"ProratedAmount":0.0,"AdjustedStartDate":null,"TaxableStateDesc":"Tax Included","AnyTaxesAssigned":true,"IncludeTaxFlagEnabled":true,"WasCalculatedUsingMultipleSlotsLogic":false,"ItemOccurrences":null,"MakeUpClass":false,"DropinFee":false},{"Id":"6db5b1b3-ae9e-4f04-9b7b-6c50ec3d85b0","ObjectId":"6a293c5d-5ea0-d5b9-2ae2-f91bc2069f1b","ItemId":"c914f521-f459-c203-28c3-8536cab22143","Amount":5.75,"PriceTypeId":"cc181296-d100-4c5a-aab1-1a892ef035cb","Name":"2023-2025 - CRS - Drop In Sport - 60+","IsSelected":false,"IsOriginalPrice":false,"CanSelect":false,"ShowOnline":null,"DisplayAmount":"$5.75","DisplayProratedAmount":"No fee","DisplayAmountOrAsFree":"$5.75","WasProrated":false,"ProratedAmount":0.0,"AdjustedStartDate":null,"TaxableStateDesc":"Tax Included","AnyTaxesAssigned":true,"IncludeTaxFlagEnabled":true,"WasCalculatedUsingMultipleSlotsLogic":false,"ItemOccurrences":null,"MakeUpClass":false,"DropinFee":false},{"Id":"a956bd61-d485-4146-acf8-87f9752320d1","ObjectId":"6a293c5d-5ea0-d5b9-2ae2-f91bc2069f1b","ItemId":"c914f521-f459-c203-28c3-8536cab22143","Amount":7.50,"PriceTypeId":"fe735207-1955-4d8c-b97e-e276198698e0","Name":"2023-2025 - CRS - Drop In Sport - Adult","IsSelected":false,"IsOriginalPrice":false,"CanSelect":false,"ShowOnline":null,"DisplayAmount":"$7.50","DisplayProratedAmount":"No fee","DisplayAmountOrAsFree":"$7.50","WasProrated":false,"ProratedAmount":0.0,"AdjustedStartDate":null,"TaxableStateDesc":"Tax Included","AnyTaxesAssigned":true,"IncludeTaxFlagEnabled":true,"WasCalculatedUsingMultipleSlotsLogic":false,"ItemOccurrences":null,"MakeUpClass":false,"DropinFee":false},{"Id":"0ae91c24-871a-42fd-90ff-c0f14f51f2ee","ObjectId":"6a293c5d-5ea0-d5b9-2ae2-f91bc2069f1b","ItemId":"c914f521-f459-c203-28c3-8536cab22143","Amount":3.75,"PriceTypeId":"2301c91f-9ffb-493a-9831-fd5095b4d096","Name":"2023-2025 - CRS - Drop In Sport - Youth","IsSelected":false,"IsOriginalPrice":false,"CanSelect":false,"ShowOnline":null,"DisplayAmount":"$3.75","DisplayProratedAmount":"No fee","DisplayAmountOrAsFree":"$3.75","WasProrated":false,"ProratedAmount":0.0,"AdjustedStartDate":null,"TaxableStateDesc":"Tax Included","AnyTaxesAssigned":true,"IncludeTaxFlagEnabled":true,"WasCalculatedUsingMultipleSlotsLogic":false,"ItemOccurrences":null,"MakeUpClass":false,"DropinFee":false},{"Id":"1c63ad52-bacd-4568-a5ea-a72cb6b9180d","ObjectId":"6a293c5d-5ea0-d5b9-2ae2-f91bc2069f1b","ItemId":"c914f521-f459-c203-28c3-8536cab22143","Amount":0.00,"PriceTypeId":"6b22a81d-7487-42cb-bc6d-22d6cb6fc8a2","Name":"CRS - Drop In Sport - Rec Surrey Pass","IsSelected":false,"IsOriginalPrice":false,"CanSelect":false,"ShowOnline":null,"DisplayAmount":"No fee","DisplayProratedAmount":"No fee","DisplayAmountOrAsFree":"Free","WasProrated":false,"ProratedAmount":0.0,"AdjustedStartDate":null,"TaxableStateDesc":"Plus Tax","AnyTaxesAssigned":true,"IncludeTaxFlagEnabled":false,"WasCalculatedUsingMultipleSlotsLogic":false,"ItemOccurrences":null,"MakeUpClass":false,"DropinFee":false}],"Extras":[],"PaymentPlan":null,"HasExtras":false,"HasRequiredExtras":false,"HasRestrictions":true,"OwnerId":"b2a56415-f907-49f8-bfff-4d65f6296025","SupervisorId":null,"RecurrenceId":null,"PaddingBefore":null,"PaddingAfter":null,"OnlineRegistration":true,"UseServiceFee":false,"AdminProrateInfo":{"AutoApplyProrate":false,"ProratedInfoText":null,"NotProratedInfoText":null,"ProrateAfterSessionsNumber":1,"AllowProrateLateRegistation":false,"ProrateSessionsBasedOnDurationEnabled":false,"TodayDate":"0001-01-01T00:00:00+00:00"},"OnlineProrateInfo":{"ProrateAfterSessionsNumber":1,"AllowProrateLateRegistation":false,"ProrateSessionsBasedOnDurationEnabled":false,"TodayDate":"2024-05-26T00:00:00-07:00"},"ProrateCoursePermission":false,"IgnoreEventCapacity":false,"EnforceRegistrationsDatesRestrictions":false,"BookOverCapacity":false,"AddAnywayPrerequisites":false,"EnforceNQFeeConflict":false,"EventGroupId":null,"EventDates":"May 27, 2024","CapacityCalculationStrategy":{},"AnyHoldsForCurrentUser":true,"ValidateMembershipOnFee":false,"AllowUndoProratedFeeMembership":false,"ProrateSessionsBasedOnDuration":false,"BookingTypeInfo":{"BookingType":2,"IsSchoolProgram":false,"IsCustomBookingOnline":false,"IsCustomBookingAdmin":false,"IsCustomBooking":false},"DisplayRegistrationDatesSection":false,"IsSingleOccurrence":false,"HasValidFee":true,"EventTitle":"Drop In Basketball - 13+","EventId":"c914f521-f459-c203-28c3-8536cab22143","CourseId":"00378684","CourseIdTrimmed":"378684","EventName":"Drop In Basketball - 13+","Details":"Get active with a game of basketball. Join up with other players for a friendly game. Full court game play with team rotations. All skill levels and abilities welcome.","Spots":"13 spot(s) left","OccurrenceDate":"20240527","BookButtonText":"Register","BookButtonDescription":"Register Drop In Basketball - 13+","ClosedButtonName":"Closed","Instructor":{"Id":null,"FullName":"","Type":"","Description":"","Image":"","Email":""},"Facility":"NRC - Gym","DisplaySettings":{"DisplayInstructorsName":false,"DisplayPrices":true,"DisplaySpotsLeft":true,"DisplayRegistrationDate":true,"DisplayNumberOfSessions":true,"DisplayCourseId":true,"DisplayAgeRestrictions":true,"DisplayRankRestrictions":true,"DisplayGenderRestrictions":false,"ButtonName":"Register","UseBookMe5UiWidgetVersion":false,"WidgetUIVersion":0},"PriceRange":null,"AllDayEvent":false,"AnyTimeBrokenOccurrences":false,"StartDateValue":"2024-05-27T06:30:00","FormattedStartDate":"2024 May 27th","FormattedStartTime":"06:30 AM","EndDateValue":"2024-05-27T08:00:00","FirstOccurrenceEndDate":null,"FormattedEndDate":"May 27th","FormattedEndTime":"08:00 AM","FirstOccurrenceFormattedEndTime":null,"EventTimeDescription":"06:30 am - 08:00 am","AlternativeLocation":null,"HasAlternativeLocation":false,"OccurrenceDescription":"Every Mon","Occurrences":[{"StartDateWithOffset":"2024-05-27T06:30:00-07:00","StartDate":"2024-05-27T00:00:00","EndDateWithOffset":"2024-05-27T08:00:00-07:00","EndDate":"2024-05-27T00:00:00","OccurrenceOrderNumber":0,"DurationInMinutes":90},{"StartDateWithOffset":"2024-06-03T06:30:00-07:00","StartDate":"2024-06-03T00:00:00","EndDateWithOffset":"2024-06-03T08:00:00-07:00","EndDate":"2024-06-03T00:00:00","OccurrenceOrderNumber":1,"DurationInMinutes":90},{"StartDateWithOffset":"2024-06-10T06:30:00-07:00","StartDate":"2024-06-10T00:00:00","EndDateWithOffset":"2024-06-10T08:00:00-07:00","EndDate":"2024-06-10T00:00:00","OccurrenceOrderNumber":2,"DurationInMinutes":90},{"StartDateWithOffset":"2024-06-17T06:30:00-07:00","StartDate":"2024-06-17T00:00:00","EndDateWithOffset":"2024-06-17T08:00:00-07:00","EndDate":"2024-06-17T00:00:00","OccurrenceOrderNumber":3,"DurationInMinutes":90},{"StartDateWithOffset":"2024-06-24T06:30:00-07:00","StartDate":"2024-06-24T00:00:00","EndDateWithOffset":"2024-06-24T08:00:00-07:00","EndDate":"2024-06-24T00:00:00","OccurrenceOrderNumber":4,"DurationInMinutes":90}],"NumberOfSessions":5,"PrerequisiteEvents":0,"DisplayablePrerequisiteEventsRestrictionsForCourses":"","DisplayableRestrictionsForCourses":"Age: 13 to 105","MinAge":13,"MinAgeMonths":null,"MaxAge":105,"MaxAgeMonths":null,"NoAgeRestriction":false,"AgeRestrictions":"13 to 105","GenderRestrictions":"Co-ed","RankRestrictions":"","FromRank":null,"ToRank":null,"StartingRankId":null,"EndingRankId":null,"DurationInMinutes":90,"FeeFrequency":null,"OrgLogo":"//az12497.vo.msecnd.net/146ba8bcf9424f4aa87791ff14172e96/logo/COS_No%2bTag_pp_cmyk.png","OrgIsSingleLocation":false,"OrgLegalName":"City of Surrey","OrgName":"City of Surrey","Address":{"AddressTag":"Newton Recreation Centre - Wave Pool","Street":"13730 - 72 Avenue","City":"Surrey","PostalCode":"V3W 2P4","CountryId":0,"Country":"","StateProvinceId":0,"AnyFieldMissing":true,"Latitude":49.132880,"Longitude":-122.842085,"Id":"cd61a6ab-e682-4af7-992d-041d69492644"},"Location":"Newton Recreation Centre - Wave Pool","BookingType":2});
+        var currencySymbol = '$';
+        var proratePopupViewModel = null;
+        var cartItem = {"EventId":"c914f521-f459-c203-28c3-8536cab22143","OccurrenceDate":"20240527","ObjectId":"6a293c5d-5ea0-d5b9-2ae2-f91bc2069f1b","WidgetId":"b4059e75-9755-401f-a7b5-d7c75361420d","CartItemMembers":[{"AccountId":"f98be704-d45f-430f-ad9f-349e73a270e6","MemberId":"b83fd1a3-938c-44ef-8a27-f411735fda10","FullNameSimple":"Micah Hou","Photo":null,"Price":{"Id":"0ae91c24-871a-42fd-90ff-c0f14f51f2ee","ObjectId":"6a293c5d-5ea0-d5b9-2ae2-f91bc2069f1b","ItemId":"c914f521-f459-c203-28c3-8536cab22143","Amount":3.75,"PriceTypeId":"2301c91f-9ffb-493a-9831-fd5095b4d096","Name":"2023-2025 - CRS - Drop In Sport - Youth","IsSelected":true,"IsOriginalPrice":false,"CanSelect":true,"ShowOnline":null,"DisplayAmount":"$3.75","DisplayProratedAmount":"No fee","DisplayAmountOrAsFree":"$3.75","WasProrated":false,"ProratedAmount":0.0,"AdjustedStartDate":null,"TaxableStateDesc":"Tax Included","AnyTaxesAssigned":true,"IncludeTaxFlagEnabled":true,"WasCalculatedUsingMultipleSlotsLogic":false,"ItemOccurrences":[{"Id":"c914f521-f459-c203-28c3-8536cab22143","StartDate":"20240527","StartDateTimeUtc":null,"StartTimeUtc":"2024-05-27T13:30:00Z","StartTimeLocal":"2024-05-27T06:30:00","EndDate":"20240527","EndTimeUtc":"2024-05-27T15:00:00Z","EndTimeLocal":"2024-05-27T08:00:00","Amount":3.75,"SubTotal":0.0,"PriceTypeId":"2301c91f-9ffb-493a-9831-fd5095b4d096","PriceIncludeTax":true}],"MakeUpClass":false,"DropinFee":false},"Extras":[],"ExtrasTotal":0.0,"AttendanceStatus":null,"RegistrationStart":null,"CompletedFormId":null,"MakeUpClassId":null}],"IsEmpty":false,"IsWidgetEmpty":false,"LandingPageBackLink":null,"FakeEventId":null,"ParentId":"5b648730-f24e-46cc-a243-1660ca04e686","AmendmentMode":false,"PaymentPlan":null,"SelectedPaymentPlanId":null};
+
+        
+
+        var feePayNowAmount = 0;
+        var feePayLaterAmount = 0;
+
+        function getTotalDuration(eventInfo) {
+            if (eventInfo) {
+                if (eventInfo.Occurrences) {
+                    var totalMins = 0;
+                    for (var i = 0; i < eventInfo.Occurrences.length; i++) {
+                        var item = eventInfo.Occurrences[i];
+                        totalMins += item.DurationInMinutes;
+                    }
+                    return totalMins;
+                }
+                return eventInfo.DurationInMinutes;
+            }
+            return 0;
+        };
+
+        function getProratedDuration(eventInfo, firstOccurenceNumber) {
+            if (eventInfo) {
+                if (eventInfo.Occurrences)
+                {
+                    var totalMins = 0;
+                    for (var i = firstOccurenceNumber; i < eventInfo.Occurrences.length; i++) {
+                        var item = eventInfo.Occurrences[i];
+                        totalMins += item.DurationInMinutes;
+                    }
+                    return totalMins;
+                }
+
+                if (firstOccurenceNumber === 0)
+                {
+                    return eventInfo.DurationInMinutes;
+                }
+            }
+            return 0;
+        };
+
+        $(document).ready(function () {
+            require(["BookMe4AttendanceHeader", "extraNameTooltip"], function (header) {
+                isAdmin ?
+                    header.adminHeader(adminHeaderValues) :
+                    header.header();
+
+                applyExtraNameTooltipPosition('.extraNameTooltip-crop', '.extraNameTooltip-tooltip');
+            });
+
+            extraItemKendoNumericBox();
+
+            $('.bm-extras-items-name').on('keydown', function(event) {
+                if (event.keyCode == 13 || event.keyCode == 32) {
+                    event.target.click();
+                }
+            });
+
+            // Apply prorate for each selected member in participant family based on prorate info.
+            
+                var firstOccurenceNumber = 0;
+                if (eventInfo.BookingType === 3) {
+                    if (isAdmin) {
+                        var allowProrateAfterSession = eventInfo.AdminProrateInfo.ProrateAfterSessionsNumber;
+                        if (eventInfo.AdminProrateInfo.AllowProrateLateRegistation && eventInfo.AdminProrateInfo.AutoApplyProrate 
+                            && firstOccurenceNumber >= allowProrateAfterSession && eventInfo.ParentEventId == null) {
+                            applyProrate('b83fd1a3-938c-44ef-8a27-f411735fda10', eventInfo, firstOccurenceNumber);
+                        }
+                    } else {
+                        if (eventInfo.OnlineProrateInfo.AllowProrateLateRegistation) {
+                            applyProrate('b83fd1a3-938c-44ef-8a27-f411735fda10', eventInfo, firstOccurenceNumber);
+                        }
+                    }
+                }
+            
+                $(window).on("inactivityTimeOutElapsed", function () {
+                    window.location.href = '/23615/Menu/BookMe4EventParticipants?eventId=c914f521-f459-c203-28c3-8536cab22143\u0026occurrenceDate=20240527\u0026contactId=b83fd1a3-938c-44ef-8a27-f411735fda10\u0026widgetId=b4059e75-9755-401f-a7b5-d7c75361420d\u0026locationId=0a9259fd-e827-477b-94a7-997feb0945d6';
+                });
+            
+
+            var cartItemMembersAvailableForHolds = cartItem.CartItemMembers.filter(function (e) { return e.Name != 'Renewed'; });
+            var holds = cartItemMembersAvailableForHolds.map(function (member) {
+                return {
+                    ObjectId: cartItem.ObjectId,
+                    RecordId: cartItem.EventId,
+                    EventInfo: {
+                        OccurrenceDate: cartItem.OccurrenceDate
+                    },
+                    ContactId: member.MemberId
+                };
+            });
+
+            AbandonPopup.addHolds(holds);
+            
+            
+            
+            // Add Participant name to selected Fee & Membership at araia-label for screen reader
+            $(".bm-extras-prices.radio-group, .bm-memberships-items.radio-group").each(function(idx, item) {
+                addParticipantNameToAriaLabel(item);
+            });
+        });
+
+        function getPayNowPayLaterPostData() {
+            var participantsFamily = {"AccountId":null,"AccountType":null,"AccountCategory":null,"CalendarId":null,"ServiceDurationId":null,"EventId":"c914f521-f459-c203-28c3-8536cab22143","SelectedContactId":"00000000-0000-0000-0000-000000000000","ReferralContactId":"b83fd1a3-938c-44ef-8a27-f411735fda10","ReferralContactMailingAddress":null,"Name":null,"DateFormat":null,"FamilyMembers":[{"IsParticipating":true,"IsRankingAvailable":false,"EventId":"00000000-0000-0000-0000-000000000000","CalendarId":null,"ServiceDurationId":null,"IsDisabled":false,"NotQualifiedForAnyFee":false,"PriceTypeId":"2301c91f-9ffb-493a-9831-fd5095b4d096","Restrictions":null,"RestrictionExtendedInfo":null,"AlreadyHasMemberships":false,"NoRequiredMemberships":true,"AlreadyHasAllMemberships":false,"MultipleFee":false,"Prices":[{"Id":"0ae91c24-871a-42fd-90ff-c0f14f51f2ee","ObjectId":"6a293c5d-5ea0-d5b9-2ae2-f91bc2069f1b","ItemId":"c914f521-f459-c203-28c3-8536cab22143","Amount":3.75,"PriceTypeId":"2301c91f-9ffb-493a-9831-fd5095b4d096","Name":"2023-2025 - CRS - Drop In Sport - Youth","IsSelected":true,"IsOriginalPrice":false,"CanSelect":true,"ShowOnline":null,"DisplayAmount":"$3.75","DisplayProratedAmount":"No fee","DisplayAmountOrAsFree":"$3.75","WasProrated":false,"ProratedAmount":0.0,"AdjustedStartDate":null,"TaxableStateDesc":"Tax Included","AnyTaxesAssigned":true,"IncludeTaxFlagEnabled":true,"WasCalculatedUsingMultipleSlotsLogic":false,"ItemOccurrences":[{"Id":"c914f521-f459-c203-28c3-8536cab22143","StartDate":"20240527","StartDateTimeUtc":null,"StartTimeUtc":"2024-05-27T13:30:00Z","StartTimeLocal":"2024-05-27T06:30:00","EndDate":"20240527","EndTimeUtc":"2024-05-27T15:00:00Z","EndTimeLocal":"2024-05-27T08:00:00","Amount":3.75,"SubTotal":0.0,"PriceTypeId":"2301c91f-9ffb-493a-9831-fd5095b4d096","PriceIncludeTax":true}],"MakeUpClass":false,"DropinFee":false}],"Extras":[],"HasPrices":true,"HasExtras":false,"AllowUpdateAddress":false,"AttendanceStatus":null,"RegistrationStart":null,"ReRegisterDetails":null,"Membership":1,"AutoAssignLevelDetails":null,"MemberId":"b83fd1a3-938c-44ef-8a27-f411735fda10","ReferralContactId":null,"FullNameSimple":"Micah Hou","FamilyMembership":"You","FirstName":null,"LastName":null,"Email":null,"Gender":null,"Age":0,"AccountId":"f98be704-d45f-430f-ad9f-349e73a270e6","Photo":null,"BirthdateValue":null,"Birthdate":null,"IsPrimaryContactForAccount":false,"Residency":"Resident","PhoneNumber":null,"PhoneNumberType":null,"Promotions":null,"MailingAddress":null}],"AvailableFamilyRelationships":null,"ContactFieldsNames":null,"ReferralContact":{"IsParticipating":true,"IsRankingAvailable":false,"EventId":"00000000-0000-0000-0000-000000000000","CalendarId":null,"ServiceDurationId":null,"IsDisabled":false,"NotQualifiedForAnyFee":false,"PriceTypeId":"2301c91f-9ffb-493a-9831-fd5095b4d096","Restrictions":null,"RestrictionExtendedInfo":null,"AlreadyHasMemberships":false,"NoRequiredMemberships":true,"AlreadyHasAllMemberships":false,"MultipleFee":false,"Prices":[{"Id":"0ae91c24-871a-42fd-90ff-c0f14f51f2ee","ObjectId":"6a293c5d-5ea0-d5b9-2ae2-f91bc2069f1b","ItemId":"c914f521-f459-c203-28c3-8536cab22143","Amount":3.75,"PriceTypeId":"2301c91f-9ffb-493a-9831-fd5095b4d096","Name":"2023-2025 - CRS - Drop In Sport - Youth","IsSelected":true,"IsOriginalPrice":false,"CanSelect":true,"ShowOnline":null,"DisplayAmount":"$3.75","DisplayProratedAmount":"No fee","DisplayAmountOrAsFree":"$3.75","WasProrated":false,"ProratedAmount":0.0,"AdjustedStartDate":null,"TaxableStateDesc":"Tax Included","AnyTaxesAssigned":true,"IncludeTaxFlagEnabled":true,"WasCalculatedUsingMultipleSlotsLogic":false,"ItemOccurrences":[{"Id":"c914f521-f459-c203-28c3-8536cab22143","StartDate":"20240527","StartDateTimeUtc":null,"StartTimeUtc":"2024-05-27T13:30:00Z","StartTimeLocal":"2024-05-27T06:30:00","EndDate":"20240527","EndTimeUtc":"2024-05-27T15:00:00Z","EndTimeLocal":"2024-05-27T08:00:00","Amount":3.75,"SubTotal":0.0,"PriceTypeId":"2301c91f-9ffb-493a-9831-fd5095b4d096","PriceIncludeTax":true}],"MakeUpClass":false,"DropinFee":false}],"Extras":[],"HasPrices":true,"HasExtras":false,"AllowUpdateAddress":false,"AttendanceStatus":null,"RegistrationStart":null,"ReRegisterDetails":null,"Membership":1,"AutoAssignLevelDetails":null,"MemberId":"b83fd1a3-938c-44ef-8a27-f411735fda10","ReferralContactId":null,"FullNameSimple":"Micah Hou","FamilyMembership":"You","FirstName":null,"LastName":null,"Email":null,"Gender":null,"Age":0,"AccountId":"f98be704-d45f-430f-ad9f-349e73a270e6","Photo":null,"BirthdateValue":null,"Birthdate":null,"IsPrimaryContactForAccount":false,"Residency":"Resident","PhoneNumber":null,"PhoneNumberType":null,"Promotions":null,"MailingAddress":null}};
+
+            var prices = [];
+
+            $(".bm-extras-participant").each(function (index, item) {
+                var memberId = item.id.toLowerCase();
+                var selectedPrice = $(item).find('.bm-extras-costs .bm-extras-prices').find('input[type="radio"]:checked, input[type="checkbox"]:checked');
+                if (selectedPrice.length > 0) {
+                    var selectedPriceId = selectedPrice[0].id.toLowerCase().split("_")[1];
+                    $(selectedPrice)
+                        .closest('tr')
+                        .find('.bm-extras-price-amount')
+                        .each(function () {
+                            var member = participantsFamily.FamilyMembers.find(function (x) {
+                                return x.MemberId === memberId;
+                            });
+                            if (member) {
+                                var price = member.Prices.find(function (x) {
+                                    return x.Id === selectedPriceId;
+                                });
+
+                                var numberOfRestSessions = proratedMemberSessions[memberId] || eventInfo.NumberOfSessions;
+
+                                if (price) {
+                                    prices.push(
+                                        {
+                                            Id: price.Id,
+                                            ObjectId: price.ObjectId,
+                                            ItemPrice: price.ProratedAmount || price.Amount,
+                                            IsPayLater: true,
+                                            ItemPriceStartDate: kendo.toString(new Date(eventInfo.StartDateValue), constants.EventOccurrenceDateFormat),
+                                            ItemPriceEndDate: kendo.toString(new Date(eventInfo.EndDateValue), constants.EventOccurrenceDateFormat),
+                                            ItemOccurrences: price.ItemOccurrences ? price.ItemOccurrences.slice(-numberOfRestSessions) : null
+                                        });
+                                }
+                            }
+                        });
+                }
+            });
+            return {
+                paymentPlanModel: eventInfo.PaymentPlan ? eventInfo.PaymentPlan.PaymentPlan : null,
+                itemPrices: prices
+            };
+        }
+
+        function calculatePayNowPayLater() {
+            var postData = getPayNowPayLaterPostData();
+            if (!postData.paymentPlanModel) {
+                return;
+            }
+
+            return $.ajaxJsonAntiForgeryPost({
+                url: '/23615/Menu/Planner2/CalculatePayNowPayLater',
+                data: postData,
+                async: false
+            })
+            .done(function (data) {
+                if (data) {
+                    feePayNowAmount = data.PayNow;
+                    feePayLaterAmount = data.PayLater;
+                }
+            });
+        }
+
+        function onPriceChange() {
+            
+                   calculatePayNowPayLater();
+            
+            updateSubtotals();
+        }
+
+        function onPaymentPlanSelect(element) {
+            $("#SelectedPaymentPlanId").val(element.value);
+        }
+
+        var firstSelectedMembership;
+        var membershipBlocks = $('.bm-memberships-items').closest('li');
+
+        function extraItemKendoNumericBox() {
+            $(".bm-extras-item-qty").each(function (qtyIndex, qtyItem) {                
+                var qtyElement = $(qtyItem);
+                var qtyNumericTextBox = qtyElement.kendoNumericTextBox({
+                    format: "#",
+                    decimals: 0,
+                    change: function(e) {
+                        updateSubtotals();
+                        validateRequiredQuantity(e);
+                    },
+                    spin: function(e) {
+                        updateSubtotals();
+                        validateRequiredQuantity(e);
+                    }
+                }).data("kendoNumericTextBox");
+                
+                qtyElement.blur(function () {
+                    qtyNumericTextBox.trigger("change");
+                });
+
+                qtyElement.removeAttr('aria-valuemin');
+                qtyElement.removeAttr('aria-valuemax');
+                qtyElement.removeAttr('aria-readonly');
+                qtyElement.attr('type', 'number');
+                
+                var kendoNumericId = qtyElement.data('labelId');
+                $(".k-formatted-value.bm-extras-item-qty.k-input:not([id])").attr('id', kendoNumericId);
+            });
+        }
+
+        function updatePricePerExtraDescription() {                       
+            var duration = (kendo.parseDate(eventInfo.EndDateValue) - kendo.parseDate(eventInfo.StartDateValue)) / 60000;
+            
+            $('.bm-extras-costs .bm-extras-items tr')
+                .each(function(extraIndex, extraItem) {
+                    if (eventInfo.NumberOfSessions > 1) {
+                        duration = 0;
+                        var memberId = $(extraItem).closest(".bm-extras-participant").attr('id');
+                        var numberOfSessions = proratedMemberSessions[memberId] || eventInfo.NumberOfSessions;
+                        for (var i = 0; i < numberOfSessions; i++) {
+                            duration += (kendo.parseDate(eventInfo.Occurrences[i].EndDateWithOffset) - kendo.parseDate(eventInfo.Occurrences[i].StartDateWithOffset)) / 60000;
+                        }
+                    }
+
+                    var isPerHour = $(extraItem).find(".bm-extras-per-hour").attr('value') === "True";
+                    var extraItemAmountVal = $(extraItem).find('.bm-extras-cost-amount').val();
+                    var amount = isPerHour ?
+                                 (kendo.parseFloat(extraItemAmountVal) / Math.ceil(Number(duration / 15))) * 4 :
+                                  kendo.parseFloat(extraItemAmountVal);
+                    var description = isPerHour ? "each/hour" : "each";
+                                                                                                                            
+                    $(extraItem).closest('tr').find('.bm-price-description').html(kendo.format("{1}{0:n2} {2}", amount , currencySymbol, description));                                                                                                    
+                });
+        }    
+        
+        function updateTotalByExtra() {              
+            $('.bm-extras-costs .bm-extras-items tr')
+                .each(function(extraIndex, extraItem) {
+                    var amount = $(extraItem).find('.bm-extras-cost-amount').val();                    
+                    var qty = $(extraItem).find('.bm-extras-item-qty[data-role=numerictextbox]').data("kendoNumericTextBox").value() === undefined ? Number(0) : $(extraItem).find('.bm-extras-item-qty[data-role=numerictextbox]').data("kendoNumericTextBox").value() ;
+
+                    var priceTagValue = qty > 0 ? kendo.parseFloat(amount) * qty : kendo.parseFloat(amount) * 1;
+
+                    if ( $(extraItem).find('.bm-price-tag').html() !== "Free")
+                        $(extraItem).find('.bm-price-tag').html(kendo.format("{1}{0:n2}", priceTagValue, currencySymbol));
+                });
+        }                  
+
+        function validateRequiredQuantity(e, sender) {
+            if (!sender) {
+                sender = $(e.sender.element);
+            }
+            if (sender.data('min')) {
+                var qty = sender.val();
+                var requiredQty = Number(sender.data('min'));  
+                var maxQty = Number(sender.attr('max'));
+                var elem = sender.closest('tr').find('.bm-extras-items-warning');             
+
+                if (maxQty < 1) {
+                    elem.text("Sold out or no longer available");
+                    elem.show(); 
+                } else if (qty < requiredQty) {
+                    var msg = "Quantity must be at least" + " " + requiredQty;
+                    elem.text(msg);
+                    elem.show();                    
+                } 
+                else {
+                    elem.hide();
+                }               
+            }                                        
+        }
+
+        function updateSubtotals() {
+            enableNavBar();            
+            var memberships = [];
+            var total = 0;
+            var extraPayNowAmount = 0;
+            var extraPayLaterAmount = 0
+            var extrasDictionary = [];
+            var extrasWithInvalidQuantities = [];
+            $(".bm-extras-items-warning").hide();
+          
+            $(".bm-extras-participant").each(function (index, item) {
+                var sum = 0;
+                var memberId = item.id.toLowerCase();               
+                var selectedPriceId;
+                var selectedPriceTypeId;
+                var isSelectedPriceMakeUp;
+                var selectedPrice = $(item).find('.bm-extras-costs .bm-extras-prices').find('input[type="radio"]:checked, input[type="checkbox"]:checked');
+                if (selectedPrice.length > 0) {
+                    selectedPriceId = selectedPrice[0].id.toLowerCase().split("_")[1];
+                    isSelectedPriceMakeUp = $(selectedPrice[0]).data('is-makeup').toLowerCase();
+                    $(selectedPrice)
+                        .closest('tr')
+                        .find('.bm-extras-price-amount')
+                        .each(function() {
+                            sum += kendo.parseFloat($(this).val());
+                        });
+
+
+                    // Show prorate, undo-prorate, old amount only for selected price.
+                    $(item)
+                        .find('.prorate-buttons, .before-prorate-price')
+                        .hide();
+                    $(selectedPrice)
+                        .closest('tr')
+                        .find('.prorate-buttons, .before-prorate-price')
+                        .show();
+                }
+
+                var selectedMembershipId;
+                var dropDownlistValue;
+                var selectedMembership = $(item).find('.bm-extras-costs .bm-memberships-items input[type="radio"]:checked');
+                if (selectedMembership.length > 0) {
+                    selectedMembershipId = selectedMembership[0].id.toLowerCase().split("_")[1];
+                    if (selectedMembershipId != 'membership') {
+                        memberships.push(selectedMembership.closest('li'));
+                    }
+
+                    $(this).find('.membership-fees-dropdown').hide();
+
+                    var dropdownlistFees = $('#dropDownId' + "_" + selectedMembership[0].id);
+
+                    var dropDownListFeeSelected = dropdownlistFees.find('option:selected');
+
+                    selectedPriceTypeId = dropDownListFeeSelected.attr('type');
+                    var originalPrice = dropDownListFeeSelected.attr('originalprice');
+                    var proratedPrice = dropDownListFeeSelected.attr('proratedprice');
+
+
+                    if (isAdmin) {
+                        dropDownlistValue = dropdownlistFees.val();
+                    } else {
+                        var minMembershipFeeValueWrapper = $(selectedMembership).closest('tr').find('.minMembershipFeeValue');
+                        dropDownlistValue = minMembershipFeeValueWrapper.val();
+                        selectedPriceTypeId = minMembershipFeeValueWrapper.data('selectedPriceTypeId');
+                        originalPrice = minMembershipFeeValueWrapper.data('originalPrice');
+                        proratedPrice = minMembershipFeeValueWrapper.data('proratedPrice');
+                    }
+
+                    var priceTag = $('#priceTag' + "_" + selectedMembership[0].id);
+                    var priceTagFieldValue = $('#priceTagValue' + "_" + selectedMembership[0].id);
+                    priceTag.text(kendo.format("{1}{0:n2}", dropDownlistValue, currencySymbol));
+                    priceTagFieldValue.val(dropDownlistValue);
+                    priceTag.show();
+
+                    $(this).find('.prorate-button-membership').hide();
+                    $(this).find('.bm-price-original-tag').hide();
+                    $(this).find('.membershipFees-dropdownlist').hide();
+
+
+
+                    var proratedFeeMembershipHidden = $('#IsProratedFeeMembership_' + selectedMembership[0].id);
+
+                    var isProratedFeeMembership = proratedFeeMembershipHidden.length > 0 ? proratedFeeMembershipHidden.val().toLowerCase() == 'true' : false;
+
+                    if (isProratedFeeMembership) {
+
+                        var prorateMembershipApplied = $('#isProrateMembershipApplied_' + selectedMembership[0].id);
+                        var applyProrateMembershipExtraSelected = $('#applyProrateMembershipExtra_' + selectedMembership[0].id);
+                        var undoProrateMembershipExtraSelected = $('#undoProrateMembershipExtra_' + selectedMembership[0].id);
+
+                        var priceOriginalTag = $('#priceOriginalTag_' + selectedMembership[0].id);
+
+                        var isProrateMembershipApplied = prorateMembershipApplied.length > 0 ? prorateMembershipApplied.val().toLowerCase() == 'true' : false;
+
+                        if (isProrateMembershipApplied) {
+                            applyProrateMembershipExtraSelected.hide();
+                            undoProrateMembershipExtraSelected.show();
+                            
+                            priceOriginalTag.show();
+                            priceOriginalTag.text(kendo.format("{1}{0:n2}", originalPrice, currencySymbol));
+
+                            priceTag.text(kendo.format("{1}{0:n2}", proratedPrice, currencySymbol));
+                            priceTagFieldValue.val(proratedPrice)
+                            dropDownlistValue = proratedPrice;
+
+                            $('#dropDownId_' + selectedMembership[0].id  + ' > option').each(function () {
+                                var _name = $(this).attr('pricename');
+                                var _price = $(this).attr('price');
+
+                                $(this).text( _name + ' ' + kendo.format("{1}{0:n2}", _price, currencySymbol))
+                            });
+
+                        } else {
+                            applyProrateMembershipExtraSelected.show();
+                            undoProrateMembershipExtraSelected.hide();
+
+                            priceOriginalTag.text(kendo.format("{1}{0:n2}", originalPrice, currencySymbol));
+                            priceOriginalTag.hide();
+
+                            priceTag.text(kendo.format("{1}{0:n2}", originalPrice, currencySymbol));
+                            priceTagFieldValue.val(originalPrice)
+                            dropDownlistValue = originalPrice;
+
+                            $('#dropDownId_' + selectedMembership[0].id  + ' > option').each(function () {
+                                var _name = $(this).attr('pricename');
+                                var _price = $(this).attr('originalprice');
+
+                                $(this).text( _name + ' ' + kendo.format("{1}{0:n2}", _price, currencySymbol))
+                            });
+                        }
+                    }
+
+                    if (isAdmin) {
+                        $('.bm-extras-costs .bm-memberships-items input[type="radio"]').each(function (i, membershipItem) {
+                            if (!$(membershipItem).is(":checked")) {
+                                var currDropDown = $(membershipItem).closest('tr').find('.membershipFees-dropdownlist');
+                                var dataValue = currDropDown.attr('data-value');
+                                $(membershipItem).closest('tr').find('.bm-price-tag').text(dataValue);
+                            }
+                        });
+                    }
+
+                    dropdownlistFees.find()
+
+                    dropdownlistFees.closest('div').show();
+                    dropdownlistFees.show();
+
+                    $(selectedMembership)
+                        .closest('tr')
+                        .find('.bm-membership-price-amount')
+                        .each(function () {
+                            var membershipAmount = kendo.parseFloat($(this).val());
+                            sum += membershipAmount;
+                            extraPayNowAmount += membershipAmount;
+                        });
+                }
+
+                var selectedExtras = $(item).find('.bm-extras-costs .bm-extras-items input[type="checkbox"]:checked');
+                if (selectedExtras.length > 0) {
+                    $(selectedExtras)
+                        .closest('tr')
+                        .each(function(extraIndex, extraItem) {
+                            var amount = $(extraItem).find('.bm-extras-cost-amount').val();
+                            var qty = $(extraItem).closest('tr')
+                                .find('.bm-extras-item-qty[data-role=numerictextbox]').data("kendoNumericTextBox").value() || 0;
+                            var extraId = $(extraItem).closest('tr').find('input[type="checkbox"]').attr('id').split("_")[1];
+                            var maxQty = Number($(extraItem).closest('tr').find('.bm-extras-item-qty[data-role=numerictextbox]').attr('max'));                            
+
+                            qty = Number(qty < 0 ? 1 : qty);
+                            var extraAmount = kendo.parseFloat(amount) * qty;
+                            sum += extraAmount;
+                            extraPayNowAmount += extraAmount;
+                            
+                            if (extrasDictionary[extraId] == undefined)
+                                extrasDictionary[extraId] = 0;
+
+                            extrasDictionary[extraId] += qty;
+
+                            if (extrasDictionary[extraId] > maxQty) {
+                                var extraName = $(extraItem).closest('tr').find('.bm-extras-items-name').text();
+                                extrasWithInvalidQuantities.push({
+                                    name: extraName,
+                                    maxQty: maxQty,
+                                    qty: extrasDictionary[extraId],
+                                    elem: $(extraItem) // only last extra with huge qty will be highlighted to user
+                                });
+                            }
+                                                        
+                            $(extraItem).closest('tr').find(".bm-extras-item-qty").each(function(i, input) {
+                                validateRequiredQuantity(null, $(input));
+                            });
+                        });
+                }                               
+
+                $('.bm-cart-item-member').each(function() {
+                    var hiddenMemberId = $(this).find('.bm-cart-item-member-id').val();
+                    if (hiddenMemberId.toLowerCase() == memberId) {
+                        $(this).find('.bm-cart-item-price-id')[0].value = selectedPriceId;
+                        $(this).find('.bm-cart-item-price-makeup-class')[0].value = isSelectedPriceMakeUp;
+                        $(this).find('.bm-cart-item-price-was-prorated')[0].value = !!proratedMemberSessions[memberId];
+
+                        var bmExtrasPriceAmount = $(selectedPrice).closest('tr').find('.bm-extras-price-amount').val();
+                        if (bmExtrasPriceAmount == undefined)
+                            bmExtrasPriceAmount = 0;
+                        $(this).find('.bm-cart-item-price-prorated-amount')[0].value = bmExtrasPriceAmount;
+
+                        $(this).find('.bm-cart-item-member-extra').each(function() {
+                            var extraId = $(this).find('.bm-cart-item-member-extra-id').val().toLowerCase();
+                            var extraAmount = $(this).find('.bm-cart-item-member-extra-amount')[0];
+
+                            var extraAmountInCents;
+                            var extraQty = $(this).find('.bm-cart-item-member-extra-qty')[0];
+                            var extraSelection = $(this).find('input[type="checkbox"]')[0];
+
+                            if (extraId == selectedMembershipId) {
+                                $(this).find('.bm-cart-item-member-extra-pricetypeid')[0].value = selectedPriceTypeId;
+                                extraAmount.value = dropDownlistValue;
+                                extraAmountInCents = kendo.parseFloat(extraAmount.value) * 100;
+                            } else {
+                                extraAmountInCents = Math.round(kendo.parseFloat($(this).find('.bm-cart-item-member-extra-amount').val()) * 100).toString();
+                            }
+
+                            extraSelection.checked = false;
+
+                            if (!!proratedMemberSessions[memberId]) {
+                                var proratedPrice = $('.extras-to-purchase').filter(function() {
+                                    var extrasId = $(this).attr('id').split("_")[1];
+                                    return extrasId == extraId;
+                                }).closest('tr').find('.bm-extras-cost-amount').val();
+                                $(this).find('.bm-cart-item-member-extra-prorated-amount').val(proratedPrice);
+                            }
+
+                            if (extraId == selectedMembershipId) {
+                                extraSelection.checked = true;
+                                extraQty.value = 1;
+                            } else if (selectedExtras.length > 0) {
+                                $(selectedExtras).each(function() {
+                                    var extraIdParts = this.id.toLowerCase().split("_");                                    
+                                    if (extraIdParts[1] == extraId && extraIdParts[2] == extraAmountInCents) {
+                                        extraSelection.checked = true;
+                                        extraQty.value = $(this).closest('tr').find('.bm-extras-item-qty[data-role=numerictextbox]')
+                                            .data("kendoNumericTextBox").value();
+                                    }
+                                });
+                            }
+                        });
+                    }
+                });
+
+                total += sum;                
+                $(item).find('.bm-extras-member-subtotal').html(kendo.toString(sum, "c"));
+
+                var fullname =$(item).find('.bm-extras-participant-fullname').text();
+                $(item).find('.bm-participant-subtotal').attr('aria-label', 'The total for ' + fullname + ' ' + kendo.toString(sum, "n2") + currencySymbol);
+
+                showHideCautionLabels(selectedExtras.length > 0);
+            });
+
+            updateTotalByExtra();
+
+            $(".bm-participant-total").text(kendo.format("Estimated Total: {1}{0:n2} (You will not be charged until your spot is confirmed)", total, currencySymbol));
+            var paymentPlanSection = $('#bm-payment-plan');
+            var paymentPlanPayNowField = paymentPlanSection.find('.pay-now-amount');
+            var paymentPlanPayLaterField = paymentPlanSection.find('.pay-later-amount');
+            var totalPayNowAmount = feePayNowAmount + extraPayNowAmount;
+            var totalPayLaterAmount = feePayLaterAmount + extraPayLaterAmount;
+            $(paymentPlanPayNowField).html(kendo.format("{1}{0:n2}", totalPayNowAmount, currencySymbol));
+            $(paymentPlanPayLaterField).html(kendo.format("{1}{0:n2}", totalPayLaterAmount, currencySymbol));
+
+            // Clear membership count exceedance error messages.
+            membershipBlocks.each(function() {
+                $(this).find('.bm-membership-error-message').hide();
+            });
+            var membershipsRequired = false;
+
+            //check which allow to add identical memberships for family members only for POS2
+            if (!POS2Enabled) {
+                if (memberships.length > 1) {
+                    disableNavBar();
+
+                    memberships.forEach(function(elm) {
+                        if (!firstSelectedMembership.is(elm)) {
+                            $(elm).find('.bm-membership-error-message').show();
+                            membershipsRequired = true;
+                        }
+                    });
+                } else if (memberships.length == 1) {
+                    enableNavBar();
+                    firstSelectedMembership = memberships[0];
+                }
+            }
+           
+             var notqualifiedMemberships= 'False';
+            if (notqualifiedMemberships === 'True') {
+                //todo:disable next button if there is no permissions
+                      disableNavBar();
+                }
+            if (extrasWithInvalidQuantities.length > 0) {
+                disableNavBar();
+
+                extrasWithInvalidQuantities.forEach(function(invalidExtra) {
+                    var msg = "Sold out or no longer available. " +
+                              "Total qty in stock is " + invalidExtra.maxQty +
+                              ", selected " + invalidExtra.qty;
+                    var elem = invalidExtra.elem.find('.bm-extra-error-message');
+                    elem.text(msg);
+                    elem.show();
+                });
+            } else {
+                $('.bm-extras-costs .bm-extras-items .bm-extra-error-message').hide();
+                if (!membershipsRequired)                   
+                    enableNavBar();
+            }
+
+            if ($(".bm-extras-items-warning:visible").length) {
+                disableNavBar();
+            }            
+        }
+        function disableNavBar() {            
+            $('.bm-form-navbar [data-disable-on-load]').attr('disabled', 'disabled').addClass("disabled");
+        }
+        function enableNavBar() {
+            $('.bm-form-navbar').children().removeAttr('disabled').removeClass("disabled");
+        }
+        function onExtraSelected(element, optionalQuantity) {
+
+            var isRequired = $(element).data("isrequired");
+            if (isRequired && !$(element).is(':checked')) {
+                $(element).prop('checked', true);
+                return false;
+            }
+
+            var qtyField = $(element).closest('td').next('td').find('.bm-extras-item-qty[data-role=numerictextbox]');
+            var qtyKendoField = qtyField.data("kendoNumericTextBox");
+
+            if(!qtyField.hasClass("unchangeable-qty"))
+            {
+                if ($(element).is(':checked')) {
+                    qtyKendoField.enable(true);
+                    qtyKendoField.value(optionalQuantity); //set defined quantity for optional extras
+                    var memberId = $(element).closest('div.bm-extras-participant').attr("id");
+                    // need to unselect same extras if they were added for amendment
+                    var extraId = $(element).data("extraid");
+                    $("input[type='checkbox'][data-extraid='" + extraId + "'][id*='"+memberId+"']")
+                        .each(function(idx, el) {
+                            if (el !== element) {
+                                $(el).prop('checked', false);
+                                var qtyFld = $(el).closest('td').next('td').find('.bm-extras-item-qty[data-role=numerictextbox]');
+                                var qtyKendoFld = qtyFld.data("kendoNumericTextBox");
+                                qtyKendoFld.value("");
+                                qtyKendoFld.enable(false);
+                            }
+                        });
+                } else {
+                    qtyKendoField.value("");
+                    qtyKendoField.enable(false);
+                }
+            }
+
+            $(element).find('.bm-extra-error-message').text('').hide();
+            qtyField.removeAttr('aria-readonly');
+
+            updateSubtotals();
+        }
+
+        document.App = document.App || {};
+        var App = document.App;
+        App.Common = App.Common || {};
+
+        App.Common.RegistrationForm  = App.Common.RegistrationForm || {};
+        App.Common.RegistrationForm.TemporaryContactId = "265286d0-751b-403f-888c-33c027f12b01";
+        App.Common.RegistrationForm.TemporaryId = "4b89d23f-81e2-46e4-90fd-8d33e3618992";
+
+        function showRegistrationFormAndAddToCart() {
+            var registrationFormExtras = [];
+
+            $(".extras-to-purchase:checked").each(function(){
+
+                registrationFormExtras.push({ itemId: $(this).attr("data-extraId"), objectId: $(this).attr("data-objectId"), memberId: $(this).attr("data-memberId") });
+            });
+
+            function showRegistrationFormForExtras() {
+                var registrationFormExtra = registrationFormExtras.pop();
+                registrationFormExtra ?
+                   showRegistrationFormPriorAction({
+                       objectId: registrationFormExtra.objectId,
+                       recordId: registrationFormExtra.itemId,
+                       callback: showRegistrationFormForExtras,
+                       contactId: registrationFormExtra.memberId
+                   }) : payForEvent();
+            }
+
+            showRegistrationFormForExtras();
+
+            function payForEvent(){
+                if(!cartHasFacilityBooking())
+                    $('#nextPageForm').submit();
+            }
+        }
+
+        // Dictionary contains (memberId, prorated sessions number) key-value pair.
+        var proratedMemberSessions = {};
+
+        function applyProrate(memberId, eventInfo, firstOccurenceNumber) {
+            var numberOfRestSessions = eventInfo.NumberOfSessions - firstOccurenceNumber;
+            proratedMemberSessions[memberId] = numberOfRestSessions;
+            // Fees
+            $('#' + memberId + ' .bm-extras-prices tr')
+                .each(function(feeIndex, feeItem) {                                                        
+                    var feeItemAmountVal = $(feeItem).find('.bm-extras-price-amount').val();
+                    var fullAmount = kendo.parseFloat(feeItemAmountVal);
+                    var resultAmount = 0;
+                    if (eventInfo.AdminProrateInfo.ProrateSessionsBasedOnDurationEnabled && eventInfo.ProrateSessionsBasedOnDuration) {
+                        var totalDuration = getTotalDuration(eventInfo);
+                        var proratedDuration = getProratedDuration(eventInfo, firstOccurenceNumber);
+                        resultAmount = (fullAmount / totalDuration) * proratedDuration;
+                    } else {
+                        resultAmount = (fullAmount / eventInfo.NumberOfSessions) * numberOfRestSessions;
+                    }
+
+                    var priceTag = $(feeItem).find('.bm-price-tag');
+                    var oldPriceTag = $('<span></span>').addClass('before-prorate-price').html(kendo.format("{1}{0:n2}", fullAmount , currencySymbol)).data("original-amount", fullAmount);
+                    oldPriceTag.insertBefore(priceTag);
+
+                    $(feeItem).find('.bm-extras-price-amount').val(resultAmount);
+                    priceTag.html(kendo.format("{1}{0:n2}", resultAmount , currencySymbol));                                                                                                    
+                });
+
+            // Extras
+            $('#' + memberId + ' .bm-extras-costs .bm-extras-items tr')
+                .each(function(extraIndex, extraItem) {                                                        
+                    var extraItemAmountVal = $(extraItem).find('.bm-extras-cost-amount').val();
+
+                    // We should not apply prorate for products and memberships.
+                    var isEquipment = $(extraItem).find('.bm-extras-per-hour').val() === 'True' ||
+                                      $(extraItem).find('.bm-extras-per-session').val() === 'True';
+                    if (!isEquipment) {
+                        return;
+                    }
+
+                    // For course per hour extras total value was calculated for all sessions.
+                    // So here we should apply it for rest sessions.
+                    var currentExtra = findExtra(extraItem, memberId);
+
+                    var fullAmount = kendo.parseFloat(extraItemAmountVal);
+
+                    var occurrenceNumber = eventInfo.NumberOfSessions - numberOfRestSessions;
+
+                    var resultAmount = calculateProratedExtraAmount(currentExtra, occurrenceNumber, fullAmount);
+
+                    $(extraItem).find('.bm-extras-cost-amount').val(resultAmount);                                                                                                    
+                });
+
+            // Show and hide appropriate messages.
+            $('#' + memberId + ' .undo-prorate-button').show();
+            $('#' + memberId + ' .prorate-button').hide();
+            $('.prorated-fee-message').show();
+            $('.bm-admin-course-prorate-message').hide();
+            var messageText = $('.bm-admin-course-prorate-message.prorated .message-text').html();
+            if (!!messageText) {
+                $('.bm-admin-course-prorate-message.prorated').show();
+            }    
+            
+            updatePricePerExtraDescription();
+            updateTotalByExtra();
+            updateSubtotals();
+        };
+
+        function undoProrate(memberId) {
+            // Fees
+            $('#' + memberId + ' .bm-extras-prices tr')
+                .each(function(feeIndex, feeItem) {                                                        
+                    var feeItemAmountVal = $(feeItem).find('.bm-extras-price-amount').val();
+                    var proratedAmount = kendo.parseFloat(feeItemAmountVal);
+                    var resultAmount = (proratedAmount / proratedMemberSessions[memberId]) * eventInfo.NumberOfSessions;
+                    
+                    $(feeItem).find('.before-prorate-price').remove();
+
+                    $(feeItem).find('.bm-extras-price-amount').val(resultAmount);
+                    $(feeItem).find('.bm-price-tag').html(kendo.format("{1}{0:n2}", resultAmount , currencySymbol));                                                                                                    
+                });
+
+            // Extras
+            $('#' + memberId + ' .bm-extras-costs .bm-extras-items tr')
+                .each(function(extraIndex, extraItem) {                                                        
+                    var extraItemAmountVal = $(extraItem).find('.bm-extras-cost-amount').val();
+
+                    // We should not apply prorate for products and memberships.
+                    var isEquipment = $(extraItem).find('.bm-extras-per-hour').val() === 'True' ||
+                                      $(extraItem).find('.bm-extras-per-session').val() === 'True';
+                    if (!isEquipment) {
+                        return;
+                    }
+
+                    var currentExtra = findExtra(extraItem, memberId);
+
+                    var fullAmount = kendo.parseFloat(extraItemAmountVal);
+
+                    var resultAmount = 0;
+                    if (currentExtra) {
+                        resultAmount = calculateProratedExtraAmount(currentExtra, 0, fullAmount);
+                    } else {
+                        var proratedAmount = kendo.parseFloat(extraItemAmountVal);
+                        resultAmount = (proratedAmount / proratedMemberSessions[memberId]) * eventInfo.NumberOfSessions;
+                    }
+                    
+                    $(extraItem).find('.bm-extras-cost-amount').val(resultAmount);                                                                                                   
+                });
+
+            // Show and hide appropriate messages. 
+            $('#' + memberId + ' .prorate-button').show();
+            $('#' + memberId + ' .undo-prorate-button').hide();
+            $('.prorated-fee-message').hide();
+            $('.bm-admin-course-prorate-message').hide();
+            var messageText = $('.bm-admin-course-prorate-message.not-prorated .message-text').html();
+            if (!!messageText) {
+                $('.bm-admin-course-prorate-message.not-prorated').show();
+            }
+
+            $("input[value='" + memberId + "']").parent().find('.bm-cart-item-price-adjusted-time').val("");
+
+            proratedMemberSessions[memberId] = undefined;
+            updatePricePerExtraDescription();
+            updateTotalByExtra();
+            updateSubtotals();
+        };
+
+        function findExtra(extraItem, memberId) {
+            var currentExtra = null;
+            var extra = $(extraItem).find("input[type='checkbox']");
+            if (extra.length) {
+                var extraId = extra.data("extraid");
+                var isOriginalExtra = extra.data("isoriginalextra");
+                var member = Enumerable.From(cartItem.CartItemMembers).FirstOrDefault(null,
+                    function(x) {
+                        return x.MemberId === memberId;
+                    });
+                if (member && member.Extras) {
+                    currentExtra = Enumerable.From(member.Extras).FirstOrDefault(null,
+                        function(x) {
+                            return x.Id === extraId && x.IsOriginalExtra === isOriginalExtra;
+                        });
+                }
+            }
+            return currentExtra;
+        };
+
+        function calculateProratedExtraAmount(currentExtra, occurrenceNumber, fullAmount) {
+            var resultAmount = 0;
+            if (currentExtra &&
+                currentExtra.CustomizedOccurrences &&
+                currentExtra.CustomizedOccurrences.length) {
+                var occurrenceStart = kendo.parseDate(eventInfo.Occurrences[occurrenceNumber].StartDateWithOffset, "yyyy-MM-ddTHH:mm:ss");
+                for (var i = 0; i < currentExtra.CustomizedOccurrences.length; i++) {
+                    var extraOccurrence = currentExtra.CustomizedOccurrences[i];
+                    var extraOccurrenceStart = kendo.parseDate(extraOccurrence.StartTimeString);
+                    if (extraOccurrenceStart.getTime() >= occurrenceStart.getTime()) {
+                        resultAmount += extraOccurrence.Amount;
+                    }
+                }
+
+            } else {
+                resultAmount = (fullAmount / eventInfo.NumberOfSessions) * numberOfRestSessions;
+            }
+            return resultAmount;
+        }
+
+        function removeParticipantNameFromAriaLabel(element) {            
+            $(element).closest('.bm-extras-prices.radio-group, .bm-memberships-items.radio-group').find('.fee-name-item, .membership-name-item').each(function (idx, item) {
+                var ariaLabel = $(item).data('ariaLabelSelected');
+                $(item).attr('aria-label', ariaLabel);
+            });            
+        }
+
+        function addParticipantNameToAriaLabel(element) {            
+            $(element).find('.radio-item:has(input[type="radio"]:checked) span.fee-name-item, .radio-item:has(input[type="radio"]:checked) span.membership-name-item').each(function (idx, item) {                
+                var ariaLabel = $(item).data('ariaLabelFirst');
+                $(item).attr('aria-label', ariaLabel);                
+            });            
+        }
+
+        function undoProrateMembershipExtra(membershipId, applyProrate) {
+
+            var applyProrateBtn = $('#applyProrateMembershipExtra_' + membershipId);
+            var undoProrateBtn = $('#undoProrateMembershipExtra_' + membershipId);
+
+            var dropdown = $('#dropDownId_' + membershipId);
+
+
+            if (applyProrateBtn.length && undoProrateBtn.length) {
+
+                if (applyProrate) {
+                    applyProrateBtn.hide();
+                    undoProrateBtn.show();
+
+                    $('.optionFeesProratedPrice '+ membershipId).show();
+                }
+                else {
+                    applyProrateBtn.show();
+                    undoProrateBtn.hide();
+
+                    $('.optionFeesOriginalPrice '+ membershipId).show();
+                }
+            }
+            
+            var prorateMembershipApplied = $('#isProrateMembershipApplied_' + membershipId);
+            prorateMembershipApplied.val(applyProrate)
+
+            updateSubtotals();
+        }
+
+        $(".bm-extras-prices.radio-group, .bm-memberships-items.radio-group").on("focusout", function(){addParticipantNameToAriaLabel(this);});
+
+        
+    </script>             
+
+                </div>
+
+                <!--Take all to be safe when header was customized-->
+                <script src="/Scripts/jQueryPlugin/jQueryHoverIntentFull.js?05091054"></script>
+<script src="/Scripts/jQueryPlugin/jQueryValidateFull.js?05091054"></script>
+<script src="/Scripts/jQueryPlugin/jQueryTimePickerFull.js?05091054"></script>
+<script src="/Scripts/jQueryPlugin/jQueryThreeDotsFull.js?05091054"></script>
+<script src="/Scripts/jQueryPlugin/jQueryContextMenuFull.js?05091054"></script>
+<script src="/Scripts/jQueryPlugin/jQueryFloatingBoxFull.js?05091054"></script>
+<script src="/Scripts/jQueryPlugin/jQueryPlaceholderFull.js?05091054"></script>
+<script src="/Scripts/jQueryPlugin/jquery.elastic.js?05091054"></script>
+<script src="/Scripts/jQueryPlugin/jQueryBbqFull.js?05091054"></script>
+<script src="/Scripts/jQueryPlugin/jQueryPmDialog.js?05091054"></script>
+<script src="/Scripts/jQueryPlugin/jQueryPmEnhancedSelect.js?05091054"></script>
+<script src="/Scripts/Kendo/kendo.pmPreferenceRankingGrid.js?05091054"></script>
+<script src="/Scripts/jQueryPlugin/jQueryDateTimeAutocompleteFull.js?05091054"></script>
+<script src="/Scripts/swfobject/swfObjectFull.js?05091054"></script>
+<script src="/Scripts/perfectMind/Controls/FlyOutTooltip.js?05091054"></script>
+<script src="/Scripts/perfectMind/core.js?05091054"></script>
+<script src="/Scripts/perfectMind/common.js?05091054"></script>
+<script src="/Scripts/customControl/checkbox.js?05091054"></script>
+<script src="/Scripts/customControl/date.js?05091054"></script>
+<script src="/Scripts/customControl/datetime.js?05091054"></script>
+<script src="/Scripts/customControl/html.js?05091054"></script>
+<script src="/Scripts/customControl/address.js?05091054"></script>
+<script src="/Scripts/customControl/youtube.js?05091054"></script>
+<script src="/Scripts/customControl/multilookup.js?05091054"></script>
+<script src="/Scripts/customControl/lookup.js?05091054"></script>
+<script src="/Scripts/customControl/dynamiclookup.js?05091054"></script>
+<script src="/Scripts/customControl/tax.js?05091054"></script>
+<script src="/Scripts/customControl/ajaxLink.js?05091054"></script>
+<script src="/Scripts/customControl/FieldDependencyBuilder.js?05091054"></script>
+<script src="/Scripts/customControl/maskedNumber.js?05091054"></script>
+<script src="/Scripts/customControl/numericInputValidator.js?05091054"></script>
+<script src="/Scripts/customControl/taxableNumbericTextBox.js?05091054"></script>
+<script src="/Scripts/perfectMind/cardView.js?05091054"></script>
+<script src="/Scripts/jQueryPlugin/lightbox.js?05091054"></script>
+<script src="/Scripts/MartialArtsVersion3/PromoteRankByExam.js?05091054"></script>
+<script src="/Scripts/slimScroll/jquery.slimscroll.js?05091054"></script>
+<script src="/Scripts/perfectMind/Planner/PlannerAttendanceHeader.js?05091054"></script>
+<script src="/Scripts/BookMe4/BookMe4AttendanceHeader.js?05091054"></script>
+
+
+    
+            </div>
+	    </div>
+    </div>
+    
+
+    <script type="text/javascript" src="/Scripts/perfectMind/Timer/InactivityTimer.js?05091054" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Content/InactivityTimerPopup.css?05091054" type="text/css">
+    <script type="text/javascript" src="/Scripts/perfectMind/Timer/ServerPoller.js?05091054" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/Scripts/perfectMind/Timer/InactivityTimerPopup.js?05091054" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/Content/HoldsTracker.css?05091054" type="text/css">
+    <script type="text/javascript" src="/Scripts/perfectMind/Timer/HoldsTracker.js?05091054" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function() {
+            var timerTimeoutInMs = 300000; //milliseconds
+            var popupCountDownInMs = 30000;
+
+            var inactivityTimerOptions = {
+                timerSyncId: 'InactivityTimerSyncId',
+                timeout: timerTimeoutInMs - popupCountDownInMs
+            };
+            var timer = $("body").inactivityTimer(inactivityTimerOptions);
+
+            var holdRenewalpoller = $.serverPoller({
+                url: "/23615/MyProfile/ObjectHolds/Renew",
+                timeout: timerTimeoutInMs,
+                requestSyncId: "HoldServerPollerRequestSyncId",
+            });
+            
+            $(window).on('StartPoller', function(){                                    
+                holdRenewalpoller.start();                   
+            });
+
+            $(window).on('StopPoller', function(){                
+                holdRenewalpoller.stop();
+            });  
+
+            //we need this additional event listener only when we have 2 or more opened tabs
+            $(window).on('storage', function (storageEvent) {
+                if (storageEvent.originalEvent.key !== 'holdCounter')
+                    return;
+                var message;
+                try {
+                    message = JSON.parse(storageEvent.originalEvent.newValue);
+                } catch (e) {
+                    message = null;
+                }
+                
+                if (message == null || !message.hasOwnProperty('holdsCount') || message.command !== 'refresh')
+                    return;
+                if (message.holdsCount > 0) {
+                    holdRenewalpoller.start(); 
+                }
+                else {
+                    holdRenewalpoller.stop();
+                }
+            });
+        
+            $("body").on("inactive.inactivityTimer", function (ev, element, sender) {
+                if (sender.timerSyncId !== inactivityTimerOptions.timerSyncId) {
+                    return;
+                }              
+                var holdsCount = localStorage.getItem("holdCounter");
+                if (holdsCount) {
+                    InactivityTimerPopup.show(popupCountDownInMs);
+                }
+            });
+        
+            InactivityTimerPopup.timeOutElapsedCallBack(function() {
+                InactivityTimerPopup.hide();
+
+                releaseAllHolds();
+            });
+            var refreshHolds = "refreshHolds",
+                releaseHolds = "releaseHolds",
+                releaseSpecificHold = "releaseSpecificHold";
+
+            function releaseAllHolds() {
+                $.ajaxAntiForgeryPost({
+                    url: "/23615/MyProfile/ObjectHolds/Release",
+                    type: "POST"
+                }).done(function (result) {
+                    $(window).trigger("inactivityTimeOutElapsed", result && result.isBookMe4CartEmpty);
+                    if ($(document).find("iframe.online-store").length > 0) {
+                        $(document).find("iframe.online-store")[0].contentWindow.postMessage({ event: "holdsReleased" }, '*');
+                    }
+                    else {
+                        $.ajax({
+                            url: "/23615/MyProfile/ObjectHolds/RemoveOnlineStoreObjectHoldCartItems",
+                            type: "DELETE",
+                            contentType: 'application/json'
+                        })
+                    }
+
+                    HoldsTracker.refreshHoldsCount(0);
+                });
+            };
+
+            function releaseHold(eventObjectHold) {
+                //AbandonPopup.removeHolds(eventObjectHold);
+                return $.ajaxAntiForgeryPost({
+                    url: "/23615/MyProfile/ObjectHolds/ReleaseOne",
+                    type: "POST",
+                    data: eventObjectHold,
+                    success: function (data) {
+                        HoldsTracker.refreshHoldsCount(data.holdCount);
+                    }
+                });
+            }
+            function refreshObjectHolds() {
+                $("body").inactivityTimer("reset");
+
+                // simulate inactivity timer "Continue" click
+                InactivityTimerPopup.hide();
+            }
+            window.addEventListener("message", function (message) {
+
+                if (!message || !message.data) return;
+
+                switch ((message.data.event || "").toLocaleLowerCase()) {
+                    case releaseSpecificHold.toLocaleLowerCase():
+                        releaseHold(message.data.eventObjectHold);
+                        return;
+                    case refreshHolds.toLocaleLowerCase():
+                        refreshObjectHolds();
+                        return;
+                    case releaseHolds.toLocaleLowerCase():
+                        // simulate inactivity timer "Clear Holds" click
+                        releaseAllHolds();
+                        return;
+                }
+            });
+        
+            InactivityTimerPopup.popupClosedCallBack(function() {
+                $("body").inactivityTimer("reset");
+            });
+
+            require(['UserPreferencesTracker'], function (UserPreferencesTracker) {
+                HoldsTracker.init({
+                    getActiveHoldsCountUrl: "/23615/MyProfile/ObjectHolds/GetActiveHoldsCount",
+                    timerDuration: 5,
+                    userId: '4b6bb4ca-bd34-4434-8f80-0d00fc8f4244',
+                    sessionId: '34442732-f08c-413f-91c5-e127f69699d2',
+                    holdsRefreshIsNeeded: false,
+                    UserPreferencesTracker: UserPreferencesTracker
+                });
+            });
+        });
+    </script>
+    
+    
+    <link rel="stylesheet" href="/Content/AbandonPopup.css?05091054" type="text/css">
+    <script type="text/javascript" src="/Scripts/perfectMind/Timer/AbandonPopup.js?05091054" crossorigin="anonymous"></script>
+    
+    <script>
+        $(function () {
+            var isCustomBooking = "False" === "True";
+            AbandonPopup.init({
+                releaseUrl: "/23615/MyProfile/ObjectHolds/Release",
+                releaseManyUrl: "/23615/MyProfile/ObjectHolds/ReleaseMany",
+                anyActiveHoldUrl: "/23615/MyProfile/ObjectHolds/AnyActiveHold",
+                getHoldsInCartUrl: "/23615/MyProfile/ObjectHolds/GetHoldsInCart",
+                isCustomBooking: isCustomBooking,
+                selectors: '#ApplicationMenu li li:not(.OpenAsPopup) a, #Options-Setup a, #eventParticipantsSelection a.bm-button.bm-back-button, .bm-shopping-cart-icon a, .book-me-4-content .bm-back-to-calendar, .bm-form-navbar .pm-cancel-button, #childCareBookingContainer .back-action, #appSuiteCell a[target!="_blank"], #shopping-cart-icon, .header-wrapper #close-mode-container'
+            });
+        });
+    </script>
+    
+<script type="text/javascript" src="/Scripts/perfectMind/Timer/SessionExpirationTimerPopup.js?05091054" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/Content/SessionExpirationPopup.css?05091054" type="text/css">
+<script>
+// use 10 seconds buffer for request content loading.
+var timerTimeoutInMs = 120 * 60000 - 10000; //milliseconds
+var popupCountDownInMs = 30000;
+var popupStayLogin = "SessionExpirationPopupStayLoginKey";
+
+// Every ajax request to the server extends session duration (except holds requests).
+// So we should refresh timer after each request.
+$(document).on('ajaxComplete', function(e, resp, req){
+    if(req.url.indexOf('ObjectHolds/Renew') === -1) {
+        $(document).trigger('PMajaxComplete', [e, resp, req]);
+    }
+});
+
+var expirationTimerOptions = {
+    timerSyncId: 'SessionExpirationTimerSyncId',
+    timeout: timerTimeoutInMs - popupCountDownInMs,
+    events: 'PMajaxComplete'
+};
+
+var sessionExpirationTimer = $(document).inactivityTimer(expirationTimerOptions);
+
+$(document).on("inactive.inactivityTimer", function (ev, element, sender) {
+    if (sender.timerSyncId !== expirationTimerOptions.timerSyncId) {
+        return;
+    }
+
+    SessionExpirationPopup.show(popupCountDownInMs);
+});
+
+SessionExpirationPopup.timeOutElapsedCallBack(function() {
+    $(window).trigger("sessionExpiredTimeOutElapsed");
+    SessionExpirationPopup.hide();
+    window.location = '/23615/Menu/Account/SignOut%20';
+});
+        
+SessionExpirationPopup.popupClosedCallBack(function() {
+    $(document).inactivityTimer("reset");
+    $.ajax({
+        url:  "/23615/Menu/Admin/KeepSessionAlive%20%20",
+        type: "POST",
+        contentType: 'application/json'
+    })
+    .done(function (data) {
+        if (!data.keepSessionAlive) {
+            window.location = '/23615/Menu/Account/SignOut%20';
+        }
+    });
+});
+</script>
+
+    <div id="tempInfoForScreenReaders" class="hidden-label" aria-live="polite"></div>
+    
+<form action="/23615/Menu/BookMe4Extras/Extras" id="AjaxAntiForgeryForm" method="post" style="display: none;"><input name="__RequestVerificationToken" type="hidden" value="ROq68e7SqRPq2ziX05NeNDRyb-vqE3a6xheNwytTgMitkS6GS0NEgSjo5JLTCtGVV_fxte9lZq6sp3RymGzmt7zhhJEweN58CaFED8JlA5ak4PvM6YzEiTggOGOyW_Ua1mIycvjN_HWLo4pdpn-M0KAtaNk1"></form>
+<script type="text/javascript" crossorigin="anonymous" src="/Scripts/perfectMind/AjaxAntiForgeryPost.js?05091054"></script>
+
+
+<div id="lightboxOverlay" style="display: none;"></div><div id="lightbox" style="display: none;"><div class="lb-outerContainer"><div class="lb-container"><img class="lb-image" alt="Container"><div class="lb-nav"><a class="lb-prev"></a><a class="lb-next"></a></div><div class="lb-loader"><a class="lb-cancel"><img src="/../Content/Images/Widget/loading.gif" alt="Loading"></a></div></div></div><div class="lb-dataContainer"><div class="lb-data"><div class="lb-details"><span class="lb-caption"></span><span class="lb-number"></span></div><div class="lb-closeContainer"><a class="lb-close"><img src="/../Content/Images/Widget/close.png" alt="Close"></a></div></div></div></div><span id="alert-timer-notification" data-role="notification" style="display: none;"></span><script id="inactivityTimerPopUpTemplate" type="text/x-kendo-template">                 <div id="inactive-timer-popup" class="inactive-timer-popup" role="dialog" tabindex="0">                     <div class="header-section">                         <div class="header-title">You still there?</div>                         <a class="close-button" href="javascript:;" onclick="InactivityTimerPopup.hide()" role="button">×</a>                     </div>                     <div class="main-section">                         <div class="first-line-label">Don&rsquo;t lose your held event spots!</div>                         <div class="second-line-label">Click "continue" to retain the held event spots.</div>                         <div class="timer-progress-bar" data-pct="">                             <svg id="svg" width="300" height="200" viewPort="0 0 230 230" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">                                 <defs>                                  <linearGradient id="linear">                                     <stop offset="0%" stop-color="\#5577EE"/>                                     <stop offset="100%" stop-color="\#663399"/>                                 </linearGradient>                                 </defs>                                 <circle r="125" cx="147" cy="135" fill="transparent" stroke-dasharray="786" stroke ="\#D1D9DF" stroke-dashoffset="0%" ></circle>                                 <circle id="bar" r="125" cx="200" cy="10" fill="transparent" stroke-dasharray="786" stroke ="url(\#linear)" ></circle>                             </svg>                         </div>                     </div>                     <div>                         <button class="button clear-button" onclick="InactivityTimerPopup.clearHoldsButtonClick()">Clear Holds</button>                         <button class="button continue-button" onclick="InactivityTimerPopup.hide()">Continue</button>                     </div>                 </div>             </script><div style="display: none" class="abandon-popup-body" role="dialog">                 <p>                     If you navigate away from this webpage you will lose the holds you have started for this event. Events that have been successfully added to your shopping cart will remain but the current event holds will be lost.                 </p>                 <div class="abandon-popup-button-panel">                     <button class="abandon-popup-continue-button">Continue</button>                     <button class="abandon-popup-cancel-button">Cancel</button>                 </div>             </div><span id="session-timer-notification" data-role="notification" style="display: none;"></span><script id="sessionExpirationPopUpTemplate" type="text/x-kendo-template">                 <div id="session-expiration-timer-popup" class="session-expiration-timer-popup" role="dialog" tabindex="0">                     <div class="header-section">                         <div class="header-title">Are you still there?</div>                         <a class="close-button" href="javascript:;" onclick="SessionExpirationPopup.hide()" tabindex="-1" role="button">×</a>                     </div>                     <div class="main-section">                         <div id="session-expiration-countdown">                             <div id="session-expiration-countdown-number"></div>                             <svg>                                 <circle class="static-circle" r="55" cx="60" cy="60"></circle>                                 <circle class="animated-circle" r="55" cx="60" cy="60" style=""stroke-dashoffset","345px""></circle>                             </svg>                         </div>                     </div>                     <div>                         <button class="button continue-button" onclick="SessionExpirationPopup.hide()" aria-label="You will be logged out in 30 seconds. To stay logged in press enter button.">Stay logged in</button>                     </div>                 </div>             </script><div class="holds-tracker" style="top: 118px;" aria-controls="holdsTrackerInfoBlockUniqueId" aria-expanded="true">                     <div class="holds-tracker-arrow" role="button" tabindex="0" aria-label="Expand or collapse hold tracker"><img alt="Expand or collapse hold tracker" src="/Content/Images/Arrow_Grid.png"></div>                     <div id="holdsTrackerInfoBlockUniqueId" class="holds-tracker-info-block" tabindex="0">                         <div class="holds-tracker-spots"><span class="number">1</span><span class="spots-label"> spot held</span></div>                         <div class="holds-tracker-message">until inactive for 5 minutes</div>                     </div>                 </div></body></html>
